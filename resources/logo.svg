@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.56"
-     inkscape:cx="176.48738"
-     inkscape:cy="188.3868"
+     inkscape:zoom="3.6203867"
+     inkscape:cx="118.77141"
+     inkscape:cy="84.57101"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -64,12 +64,18 @@
        height="14.305353"
        x="33.398251"
        y="264.09863"
-       ry="0.36222148" />
+       ry="0.36222148"
+       inkscape:export-filename="/home/mogria/Code/XML-WGCard/public/img/logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4532"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.26458333,0,0,0.26458333,24.293241,246.64413)"><flowRegion
+       transform="matrix(0.26458333,0,0,0.26458333,24.293241,246.64413)"
+       inkscape:export-filename="/home/mogria/Code/XML-WGCard/public/img/logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><flowRegion
          id="flowRegion4534"><rect
            id="rect4536"
            width="299.51022"
@@ -83,7 +89,10 @@
        x="33.540241"
        y="277.53296"
        id="text4576"
-       transform="scale(1.0029612,0.99704755)"><tspan
+       transform="scale(1.0029612,0.99704755)"
+       inkscape:export-filename="/home/mogria/Code/XML-WGCard/public/img/logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan4574"
          x="33.540241"
@@ -91,15 +100,27 @@
          style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-size:15.53440762px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Light Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#373e48;stroke-width:0.38836208">Card</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:15.69263649px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#373e48;fill-opacity:1;stroke:none;stroke-width:0.39231592"
-       x="19.606184"
-       y="226.36255"
+       style="font-style:normal;font-weight:normal;font-size:13.52964592px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#373e48;fill-opacity:1;stroke:none;stroke-width:0.33824116"
+       x="16.90377"
+       y="262.59683"
        id="text4584"
-       transform="scale(0.81386407,1.2287064)"><tspan
+       transform="scale(0.94397685,1.059348)"
+       inkscape:export-filename="/home/mogria/Code/XML-WGCard/public/img/logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan4582"
-         x="19.606184"
-         y="226.36255"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.69263649px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#373e48;stroke-width:0.39231592">WG</tspan></text>
+         x="16.90377"
+         y="262.59683"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.52964592px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#373e48;stroke-width:0.33824116">WG</tspan></text>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 16.370259,266.89041 7.856262,-2.33862 8.112048,2.26554"
+       id="rect881"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/mogria/Code/XML-WGCard/public/img/logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>

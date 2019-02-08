@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- for validating promotions.xml -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- this is for validating our database for promotions: promotions.xml -->
+    <xs:import namespace="http://wgcard.xml.hslu.ch/promotion" schemaLocation="promotion.xsd" />
+
+    <xs:element name="promotions">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element ref="Promotion"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

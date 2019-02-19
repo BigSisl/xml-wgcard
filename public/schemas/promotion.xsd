@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-           xmlns="http://wgcard.xml.hslu.ch/promotion" 
-           targetNamespace="http://wgcard.xml.hslu.ch/promotion" 
-           elementFormDefault="qualified">
-           <!-- used for validating promotion XML input of businesses and partially our database.
-            Note: we may need to extend this to include the businesses name in the
-            case of adding a promotion
-           -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://wgcard.xml.hslu.ch/promotion"
+    targetNamespace="http://wgcard.xml.hslu.ch/promotion"
+    elementFormDefault="qualified">
+    <!-- used for validating promotion XML input of businesses and partially our database
+    Note: we may need to extend this to include the businesses name in the
+    case of adding a promotion
+    -->
     <xs:element name="Promotion">
         <xs:complexType>
             <xs:sequence minOccurs="1" maxOccurs="unbounded">
                 <xs:element name="name" type="xs:string"/>
                 <xs:element name="description" type="xs:string"/>
-                <xs:element name="rebate" type="xs:string">
+                <xs:element name="rebate" type="xs:string"></xs:element>
             </xs:sequence>
             <xs:attribute name="added" type="xs:date" use="required"/>
         </xs:complexType>

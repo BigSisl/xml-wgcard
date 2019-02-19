@@ -5,23 +5,51 @@
     <xsl:template match="/p:page">
         <form action="wgcard-apply.php" method="POST">
 
-            <div class="wg-member">
-                <label>WG Mitglied #<span class="wg-member-number">1</span></label>
-                <input type="text" name="name" />
+            <div id="wg-members">
+                <div class="field wg-member">
+                    <label>WG Mitglied #<span class="wg-member-number">1</span></label>
+                    <input type="text" name="name" />
+                </div>
             </div>
             <!-- some js to add another member -->
-            <button name="add member">WG Mitglied hinzufügen.</button>
+            <button name="addmember">WG Mitglied hinzufügen.</button>
 
-            <label>Strasse</label>
-            <input type="text" name="street" />
+            <div class="field">
+                <label>Strasse</label>
+                <input type="text" name="street" />
+            </div>
 
-            <label>PLZ</label>
-            <input type="text" name="zip" />
+            <div class="field">
+                <label>PLZ</label>
+                <input type="text" name="zip" />
+            </div>
 
-            <label>Ort</label>
-            <input type="text" name="city" />
+            <div class="field">
+                <label>Ort</label>
+                <input type="text" name="city" />
+            </div>
 
-            <input name="submit" type="submit" value="WG Card bestellen!"/>
+            <div class="field">
+                <input name="submit" type="submit" value="WG Card bestellen!" />
+            </div>
         </form>
+        <script>
+            //<![CDATA[
+                var template = $("#wg-members .field.wg-member");
+                var wgMemberNumber = +template.find(".wg-member-number").text();
+                function addWGMember() {
+                    wgMemberNumber++;
+                    var newWgMemberField = template.clone();
+                    newWgMemberField.find(".wg-member-number").text(wgMemberNumber);
+                    $("#wg-members").append(newWgMemberField);
+                }
+
+                $("button[name=addmember]").click(function(ev) {
+                    ev.preventDefault();
+                    addWGMember();
+                    return false;
+                });
+            //]]>
+        </script>
     </xsl:template>
 </xsl:stylesheet>

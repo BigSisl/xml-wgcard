@@ -14,6 +14,14 @@
 						<label>Ansprechsperson</label>
 						<input type="checkbox" name="contact-person" />
 					</div>
+					
+					<div class="field">
+						<label>Geschlecht</label>
+						<select>
+							 <option value="female">weiblich</option>
+							 <option value="male">männlich</option>
+						</select>
+					</div>
 			
 					<div class="field">
 						<label>Vorname</label>
@@ -24,20 +32,15 @@
 						<label>Nachname</label>
 						<input type="text" name="lastname" />
 					</div>
-			
+					
 					<div class="field">
-						<label>Strasse</label>
-						<input type="text" name="street" />
+						<label>E-Mail</label>
+						<input type="text" name="mail" />
 					</div>
-
+					
 					<div class="field">
-						<label>PLZ</label>
-						<input type="text" name="zip" />
-					</div>
-
-					<div class="field">
-						<label>Ort</label>
-						<input type="text" name="city" />
+						<label>Tel</label>
+						<input type="text" name="tel" />
 					</div>
                 </div>
             </div>

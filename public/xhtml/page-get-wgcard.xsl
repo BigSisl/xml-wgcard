@@ -14,6 +14,21 @@
             <!-- some js to add another member -->
             <button name="addmember">WG Mitglied hinzufügen.</button>
 
+			<div class="field">
+                <label>Contact Person</label>
+                <input type="checkbox" name="contact-person" />
+            </div>
+			
+			<div class="field">
+                <label>Firstname</label>
+                <input type="text" name="firstname" />
+            </div>
+			
+			<div class="field">
+                <label>Lastname</label>
+                <input type="text" name="lastname" />
+            </div>
+			
             <div class="field">
                 <label>Strasse</label>
                 <input type="text" name="street" />

@@ -67,23 +67,5 @@
                 <input name="submit" type="submit" value="WG Card bestellen!" />
             </div>
         </form>
-        <script>
-            //<![CDATA[
-                var template = $("#wg-members .field.wg-member");
-                var wgMemberNumber = +template.find(".wg-member-number").text();
-                function addWGMember() {
-                    wgMemberNumber++;
-                    var newWgMemberField = template.clone();
-                    newWgMemberField.find(".wg-member-number").text(wgMemberNumber);
-                    $("#wg-members").append(newWgMemberField);
-                }
-
-                $("button[name=addmember]").click(function(ev) {
-                    ev.preventDefault();
-                    addWGMember();
-                    return false;
-                });
-            //]]>
-        </script>
     </xsl:template>
 </xsl:stylesheet>

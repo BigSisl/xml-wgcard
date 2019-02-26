@@ -6,15 +6,16 @@
 
     <xs:element name="page">
         <xs:complexType>
-            <!-- thesee are not actually required, but may be later on? -->
+            <!-- this way you can add site specific scripts or styles to the header -->
+
             <xs:all minOccurs="0">
-                <xs:element name="wgcard-form" type="module" minOccurs="0" />
-                <xs:element name="home" type="module" minOccurs="0" />
+                <xs:element name="head-add" type="header-extension" minOccurs="0" />
             </xs:all>
             <xs:attribute name="title" type="xs:string" />
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="module">
+    <xs:complexType name="header-extension">
+        <xs:any namespace="http://www.w3.org/1999/xhtml" />
     </xs:complexType>
 </xs:schema>

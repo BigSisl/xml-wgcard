@@ -3,7 +3,7 @@
     <xsl:import href="page.xsl" />
 
     <xsl:template match="/p:page">
-        <form action="wgcard-apply.php" method="POST">
+        <form action="../php/wgcard-apply.php" method="POST">
 			<h4>Neue WG erfassen</h4>
 			<p>Bitte gebt alle benötigten Informationen ein und schliesst dann den Vorgang mit dem Button 'WG Card bestellen!' ab. Wir freuen uns, dass sie sich bei uns registrieren.</p>
 			<h5>WG Mitglieder (min. 2)</h5>
@@ -17,7 +17,7 @@
 					
 					<div class="field">
 						<label>Geschlecht</label>
-						<select>
+						<select name="gender">
 							 <option value="female">weiblich</option>
 							 <option value="male">männlich</option>
 						</select>
@@ -48,6 +48,12 @@
             <button name="addmember">WG Mitglied hinzufügen.</button>
 
 			<h5>WG Adresse</h5>
+			
+			<div class="field">
+                <label>WG-Name</label>
+                <input type="text" name="alias" />
+            </div>
+			
             <div class="field">
                 <label>Strasse</label>
                 <input type="text" name="street" />
@@ -67,5 +73,24 @@
                 <input name="submit" type="submit" value="WG Card bestellen!" />
             </div>
         </form>
+		<script>
+            //<![CDATA[
+                var template = $("#wg-members .field.wg-member");
+                var wgMemberNumber = +template.find(".wg-member-number").text();
+                
+				function addWGMember() {
+                    wgMemberNumber++;
+                    var newWgMemberField = template.clone();
+                    newWgMemberField.find(".wg-member-number").text(wgMemberNumber);
+                    $("#wg-members").append(newWgMemberField);
+                }
+
+                $("button[name=addmember]").click(function(ev) {
+                    ev.preventDefault();
+                    addWGMember();
+                    return false;
+                });
+            //]]>
+        </script>
     </xsl:template>
 </xsl:stylesheet>

@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="wg.xsl"?>
+<wgs year="2012" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/wg" xsi:schemaLocation="http://wgcard.xml.hslu.ch/wg ../xhtml/wg.xsd">
+    <wg>
+        <wg-members>
+            <wg-member>
+                <person>
+                    <gender>male</gender>
+                    <firstName>Fabian</firstName>
+                    <lastName>Brand</lastName>
+                    <email>fabuh26@hotmail.com</email>
+                    <tel>076 702 69 32</tel>
+                </person>
+                <contactPerson>true</contactPerson>
+            </wg-member>
+            <wg-member>
+                <person>
+                    <gender>male</gender>
+                    <firstName>Fabian</firstName>
+                    <lastName>Brand</lastName>
+                    <email>fabuh26@hotmail.com</email>
+                    <tel>076 702 69 32</tel>
+                </person>
+                <contactPerson>false</contactPerson>
+            </wg-member>
+        </wg-members>
+        <alias>SuperWg</alias>
+        <address>
+            <street>Kannenbuehlstrasse 20</street>
+            <plz>6280</plz>
+            <ort>Hochdorf</ort>
+        </address>
+    </wg>
+	<wg>
+        <wg-members>
+            <wg-member>
+                <person>
+                    <gender>male</gender>
+                    <firstName>s</firstName>
+                    <lastName>Brand</lastName>
+                    <email>fabuh26@hotmail.com</email>
+                    <tel>076 702 69 32</tel>
+                </person>
+                <contactPerson>true</contactPerson>
+            </wg-member>
+            <wg-member>
+                <person>
+                    <gender>male</gender>
+                    <firstName>s</firstName>
+                    <lastName>Brand</lastName>
+                    <email>fabuh26@hotmail.com</email>
+                    <tel>076 702 69 32</tel>
+                </person>
+                <contactPerson>false</contactPerson>
+            </wg-member>
+        </wg-members>
+        <alias>smallWg</alias>
+        <address>
+            <street>Kannenbuehlstrasse 20</street>
+            <plz>6280</plz>
+            <ort>Hochdorf</ort>
+        </address>
+    </wg>
+</wgs>

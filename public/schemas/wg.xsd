@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://wgcard.xml.hslu.ch/wg-card" targetNamespace="http://wgcard.xml.hslu.ch/wg-card" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://wgcard.xml.hslu.ch/wg" targetNamespace="http://wgcard.xml.hslu.ch/wg" elementFormDefault="qualified">
     <xs:element name="wgs">
         <xs:complexType>
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -39,8 +39,8 @@
 		<xs:complexType>
 			<xs:sequence minOccurs="1" maxOccurs="1">
 				<xs:element name="street" type="xs:string"/>
-				<xs:element name="plz" type="xs:string"/>
-				<xs:element name="ort" type="xs:string"/>
+				<xs:element name="zip" type="xs:string"/>
+				<xs:element name="city" type="xs:string"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

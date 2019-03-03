@@ -1,6 +1,6 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="wg.xsl"?>
-<wgs year="2012" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/wg-card" xsi:schemaLocation="http://wgcard.xml.hslu.ch/wg-card wg-card.xsd">
+<wgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/wg" year="2012" xsi:schemaLocation="http://wgcard.xml.hslu.ch/wg ../xhtml/wg.xsd">
     <wg>
         <wg-members>
             <wg-member>
@@ -61,4 +61,4 @@
             <ort>Hochdorf</ort>
         </address>
     </wg>
-</wgs>
+<wg><wg-members><wg-member><person><gender>male</gender><firstName>Fabian</firstName><lastName>Brand</lastName><email>fabuh26@hotmail.com</email><tel>012321523412</tel></person><contact-person>true</contact-person></wg-member></wg-members><alias>Supercoolewg</alias><address><street>Kannenb&#xFC;hlsst</street><zip>21342</zip><city>asdfas</city></address></wg></wgs>

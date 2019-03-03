@@ -18,8 +18,8 @@
     <xsl:template match="wg:wg">
 		<h2><xsl:value-of select="wg:alias"/></h2>
 		<xsl:value-of select="wg:address/wg:street"/><br/>
-		<xsl:value-of select="wg:address/wg:plz"/><br/> 
-		<xsl:value-of select="wg:address/wg:ort"/>
+		<xsl:value-of select="wg:address/wg:zip"/><br/> 
+		<xsl:value-of select="wg:address/wg:city"/>
 		
 		<h3>Contact Person</h3>
 		<xsl:value-of select="//wg:person/wg:gender"/><br/>

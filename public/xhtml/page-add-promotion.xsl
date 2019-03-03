@@ -3,7 +3,9 @@
     <xsl:import href="page.xsl" />
 
     <xsl:template match="/p:page">
-        <a href="get-wgcard.xml">Hol dir jetzt die neue WG Card!</a>
-		<a href="add-promotion.xml">Schalte eine neue Vergünstigung auf!</a>
+        <form action="promotion-apply.php" method="POST">
+			<h4>Neue Vergünstigung hinzufügen</h4>
+			
+        </form>
     </xsl:template>
 </xsl:stylesheet>

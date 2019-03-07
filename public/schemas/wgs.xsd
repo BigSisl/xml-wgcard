@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://wgcard.xml.hslu.ch/wg" targetNamespace="http://wgcard.xml.hslu.ch/wg" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://wgcard.xml.hslu.ch/wgs" targetNamespace="http://wgcard.xml.hslu.ch/wgs" elementFormDefault="qualified">
     <xs:element name="wgs">
         <xs:complexType>
             <xs:sequence minOccurs="0" maxOccurs="unbounded">

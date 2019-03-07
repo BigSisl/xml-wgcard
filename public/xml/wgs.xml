@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type="text/xsl" href="wg.xsl"?>
-<wgs year="2012" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/wg" xsi:schemaLocation="http://wgcard.xml.hslu.ch/wg ../xhtml/wg.xsd">
+<wgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/wgs" xsi:schemaLocation="http://wgcard.xml.hslu.ch/wgs ../schemas/wgs.xsd">
     <wg>
         <wg-members>
             <wg-member>
@@ -27,8 +27,8 @@
         <alias>SuperWg</alias>
         <address>
             <street>Kannenbuehlstrasse 20</street>
-            <plz>6280</plz>
-            <ort>Hochdorf</ort>
+            <zip>6280</zip>
+            <city>Hochdorf</city>
         </address>
     </wg>
 	<wg>
@@ -57,8 +57,8 @@
         <alias>smallWg</alias>
         <address>
             <street>Kannenbuehlstrasse 20</street>
-            <plz>6280</plz>
-            <ort>Hochdorf</ort>
+            <zip>6280</zip>
+            <city>Hochdorf</city>
         </address>
     </wg>
 </wgs>

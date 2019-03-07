@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://wgcard.xml.hslu.ch/promotions"
+           targetNamespace="http://wgcard.xml.hslu.ch/promotions"
+           elementFormDefault="qualified">
     <!-- this is for validating our database for promotions: promotions.xml -->
-    <xs:import namespace="http://wgcard.xml.hslu.ch/promotion" schemaLocation="promotion.xsd" />
+    <xs:include schemaLocation="promotion.xsd" />
 
     <xs:element name="promotions">
         <xs:complexType>
             <xs:sequence minOccurs="1" maxOccurs="unbounded">
-                <xs:element ref="Promotion"/>
+                <xs:element ref="promotion"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

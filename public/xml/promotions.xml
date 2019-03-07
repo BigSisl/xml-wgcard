@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type="text/xsl" href="wg.xsl"?>
-<promotions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:promotion="http://wgcard.xml.hslu.ch/promotion" xmlns="http://wgcard.xml.hslu.ch/promotions" xsi:schemaLocation="http://wgcard.xml.hslu.ch/promotions ../schemas/promotions.xsd">
+<promotions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/promotions" xsi:schemaLocation="http://wgcard.xml.hslu.ch/promotions ../schemas/promotions.xsd">
     <promotion added="2019-10-10">
         <name>test</name>
         <description>description</description>

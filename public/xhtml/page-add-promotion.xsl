@@ -3,7 +3,7 @@
     <xsl:import href="page.xsl" />
 
     <xsl:template match="/p:page">
-        <form action="promotion-apply.php" method="POST">
+        <form action="../php/promotion-apply.php" method="POST">
 			<h4>Neue Vergünstigung hinzufügen</h4>
 			<div class="field">
 				<label>Kunde</label>
@@ -24,6 +24,10 @@
 				<label>Rabatt</label>
 				<input type="text" name="discount" />
 			</div>
+			
+			<div class="field">
+                <input name="submit" type="submit" value="Promotion hinzufügen!" />
+            </div>
         </form>
     </xsl:template>
 </xsl:stylesheet>

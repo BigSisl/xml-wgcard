@@ -2,13 +2,8 @@
 	$xml = simplexml_load_file('../xml/promotions.xml');
 	
 	insertIntoXML($xml);
-	persistXML('../xml/promotions_new.xml', $xml);
 	
-	function printXML($xml) {
-		foreach ($xml->prof as $prof) {
-			echo $prof, ' teaches: ', $prof['teaches'], '<br />';
-		}
-	}
+	persistXML('../xml/promotions.xml', $xml);
 	
 	function insertIntoXML($xml) {
 		$promotion = $xml->addChild('promotion', '');

@@ -1,15 +1,9 @@
 <?php
 	$xml = simplexml_load_file('../xml/wgs.xml');
-	echo '<b>Before adding new prof: </b> <br />';
 	
 	insertIntoXML($xml);
-	persistXML('../xml/wgs_new.xml', $xml);
 	
-	function printXML($xml) {
-		foreach ($xml->prof as $prof) {
-			echo $prof, ' teaches: ', $prof['teaches'], '<br />';
-		}
-	}
+	persistXML('../xml/wgs.xml', $xml);
 	
 	function insertIntoXML($xml) {
 		$wg = $xml->addChild('wg', '');

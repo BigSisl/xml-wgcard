@@ -1,9 +1,9 @@
 <?php
-	$xml = simplexml_load_file('../xml/wgs.xml');
+	$xml = simplexml_load_file('../wgs.xml');
 	
 	insertIntoXML($xml);
 	
-	persistXML('../xml/wgs.xml', $xml);
+	persistXML('../wgs.xml', $xml);
 	
 	function insertIntoXML($xml) {
 		$wg = $xml->addChild('wg', '');

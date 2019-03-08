@@ -13,7 +13,8 @@
                 <xs:element name="name" type="xs:string"/>
                 <xs:element name="description" type="xs:string"/>
                 <xs:element name="discount" type="xs:string"></xs:element>
-		<xs:element name="provider" type="xs:string"></xs:element>
+				<xs:element name="provider" type="xs:string"></xs:element>
+				<xs:element name="amount" type="xs:integer"></xs:element>
             </xs:sequence>
             <xs:attribute name="added" type="xs:date" use="required"/>
         </xs:complexType>

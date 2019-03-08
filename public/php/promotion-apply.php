@@ -1,9 +1,9 @@
 <?php
-	$xml = simplexml_load_file('../xml/promotions.xml');
+	$xml = simplexml_load_file('../promotions.xml');
 	
 	insertIntoXML($xml);
 	
-	persistXML('../xml/promotions.xml', $xml);
+	persistXML('../promotions.xml', $xml);
 	
 	function insertIntoXML($xml) {
 		$promotion = $xml->addChild('promotion', '');

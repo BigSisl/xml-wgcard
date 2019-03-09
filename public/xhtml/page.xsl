@@ -18,7 +18,9 @@
             </head>
             <body>
                 <div id="header">
-                    <img src="img/logo.png" alt="WG Card Logo" />
+                    <a href="index.xml">
+						<img src="img/logo.png" alt="WG Card Logo" />
+					</a>
                 </div>
                 <div id="content">
                     <xsl:apply-templates />

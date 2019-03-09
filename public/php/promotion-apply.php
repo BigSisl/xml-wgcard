@@ -18,3 +18,5 @@
 		file_put_contents($path, $xml->asXML());
 	}
 ?>
+
+<a href="../add-promotion.xml">return</a>

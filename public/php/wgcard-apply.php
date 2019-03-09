@@ -1,14 +1,7 @@
 <?php
-	try{
-		$xml = simplexml_load_file('../wgs.xml');
-		insertIntoXML($xml);
-		persistXML('../wgs.xml', $xml);
-		echo $_POST['firstname'];
-		echo "successfully added new WG.";
-	}
-	catch(Exception $e){
-		echo "error occurred adding the new WG, please try again";
-	}
+	$xml = simplexml_load_file('../wgs.xml');
+	insertIntoXML($xml);
+	persistXML('../wgs.xml', $xml);
 	
 	function insertIntoXML($xml) {
 		$wg = $xml->addChild('wg', '');

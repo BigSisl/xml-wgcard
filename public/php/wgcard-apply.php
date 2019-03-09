@@ -8,8 +8,10 @@
 		
 		$wg_members = $wg->addChild('wg-members', '');
 		
-		$wg_member = $wg_members->addChild('wg-member', '');
-		insertWgMember($wg_member);
+		for ($i = 1; $i <= $_POST['membercount']; $i++){
+			$wg_member = $wg_members->addChild('wg-member', '');
+			insertWgMember($wg_member, $i);
+		}
 		
 		$wg->addChild('alias', $_POST['alias']);
 		
@@ -18,15 +20,15 @@
 		insertWgAddress($address);
 	}
 	
-	function insertWgMember($wg_member){
+	function insertWgMember($wg_member, $i){
 		$person = $wg_member->addChild('person', '');
-		insertPerson($person);
+		insertPerson($person, $i);
 		
-		if ($_POST['contact-person'] == 'on') {
-			$wg_member->addChild('contact-person', 'true');
+		if ($_POST['contactPerson'.$i] == 'on') {
+			$wg_member->addChild('contactPerson', 'true');
 		}
 		else{
-			$wg_member->addChild('contact-person', 'false');
+			$wg_member->addChild('contactPerson', 'false');
 		}
 	}
 	
@@ -36,12 +38,11 @@
 		$address->addChild('city', $_POST['city']);
 	}
 	
-	function insertPerson($person){
-		$person->addChild('gender', $_POST['gender']);
-		$person->addChild('firstName', $_POST['firstname']);
-		$person->addChild('lastName', $_POST['lastname']);
-		$person->addChild('email', $_POST['mail']);
-		$person->addChild('tel', $_POST['tel']);
+	function insertPerson($person, $i){
+		$person->addChild('firstName', $_POST['firstname'.$i]);
+		$person->addChild('lastName', $_POST['lastname'.$i]);
+		$person->addChild('email', $_POST['mail'.$i]);
+		$person->addChild('tel', $_POST['tel'.$i]);
 	}
 	
 	function persistXML($path, $xml) {

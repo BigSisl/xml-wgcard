@@ -29,7 +29,6 @@
 	</xsl:template>
 	
 	<xsl:template name="person">
-		<b>Geschlecht: </b><xsl:value-of select="wg:person/wg:gender"/><br/>
 		<b>Vorname: </b><xsl:value-of select="wg:person/wg:firstName"/><br/> 
 		<b>Nachname: </b><xsl:value-of select="wg:person/wg:lastName"/><br/>
 		<b>Mail: </b><xsl:value-of select="wg:person/wg:email"/><br/>

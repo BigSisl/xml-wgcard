@@ -48,7 +48,6 @@
 	<xs:element name="person">
 		<xs:complexType>
 			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="gender" type="genderTyp"/>
 				<xs:element name="firstName" type="xs:string"/>
 				<xs:element name="lastName" type="xs:string"/>
 				<xs:element name="email" type="xs:string"/>
@@ -56,11 +55,4 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
-	<xs:simpleType name="genderTyp">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="male"/>
-			<xs:enumeration value="female"/>
-                </xs:restriction>
-        </xs:simpleType>
 </xs:schema>

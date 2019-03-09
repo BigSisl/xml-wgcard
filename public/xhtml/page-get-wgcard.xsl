@@ -12,35 +12,27 @@
 					<h6>WG Mitglied #<span class="wg-member-number">1</span></h6>
 					<div class="field">
 						<label>Ansprechsperson</label>
-						<input type="checkbox" name="contact-person" />
-					</div>
-					
-					<div class="field">
-						<label>Geschlecht</label>
-						<select name="gender">
-							 <option value="female">weiblich</option>
-							 <option value="male">männlich</option>
-						</select>
+						<input type="checkbox" name="contactPerson1" />
 					</div>
 			
 					<div class="field">
 						<label>Vorname</label>
-						<input type="text" name="firstname" />
+						<input type="text" name="firstname1" />
 					</div>
 					
 					<div class="field">
 						<label>Nachname</label>
-						<input type="text" name="lastname" />
+						<input type="text" name="lastname1" />
 					</div>
 					
 					<div class="field">
 						<label>E-Mail</label>
-						<input type="text" name="mail" />
+						<input type="text" name="mail1" />
 					</div>
 					
 					<div class="field">
 						<label>Tel</label>
-						<input type="text" name="tel" />
+						<input type="text" name="tel1" />
 					</div>
                 </div>
             </div>
@@ -68,7 +60,9 @@
                 <label>Ort</label>
                 <input type="text" name="city" />
             </div>
-
+			
+			<input style="visibility:hidden;" type="text" name="membercount" value="1"/>
+			
             <div class="field">
                 <input name="submit" type="submit" value="WG Card bestellen!" />
             </div>
@@ -80,7 +74,24 @@
                 
 				function addWGMember() {
                     wgMemberNumber++;
+					$('input[name="membercount"]').val(wgMemberNumber);
                     var newWgMemberField = template.clone();
+					
+					var contactPersonInput = newWgMemberField.find('input[name="contactPerson1"]');
+					contactPersonInput.attr("name", "contactPerson" + wgMemberNumber);
+					
+					var firstnameInput = newWgMemberField.find('input[name="firstname1"]');
+					firstnameInput.attr("name", "firstname" + wgMemberNumber);
+					
+					var lastnameInput = newWgMemberField.find('input[name="lastname1"]');
+					lastnameInput.attr("name", "lastname" + wgMemberNumber);
+					
+					var mailInput = newWgMemberField.find('input[name="mail1"]');
+					mailInput.attr("name", "mail" + wgMemberNumber);
+					
+					var telInput = newWgMemberField.find('input[name="tel1"]');
+					telInput.attr("name", "tel" + wgMemberNumber);
+					
                     newWgMemberField.find(".wg-member-number").text(wgMemberNumber);
                     $("#wg-members").append(newWgMemberField);
                 }

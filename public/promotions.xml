@@ -8,4 +8,11 @@
         <provider>Test GMBH</provider>
 		<amount>10</amount>
     </promotion>
+	<promotion added="2019-03-10">
+		<name>asdf</name>
+		<description>asdf</description>
+		<discount>12</discount>
+		<provider>asdf</provider>
+		<amount>12</amount>
+	</promotion>
 </promotions>

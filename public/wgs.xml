@@ -85,4 +85,4 @@
 			<city>dasdfas</city>
 		</address>
 	</wg>
-<wg><wg-members><wg-member><person><gender>female</gender><firstName/><lastName/><email/><tel/></person><contactPerson>false</contactPerson></wg-member><wg-member><person><gender/><firstName/><lastName/><email/><tel/></person><contactPerson>false</contactPerson></wg-member><wg-member><person><gender/><firstName/><lastName/><email/><tel/></person><contactPerson>false</contactPerson></wg-member></wg-members><alias/><address><street/><zip/><city/></address></wg><wg><wg-members><wg-member><person><firstName>aaaaaaaa</firstName><lastName>aa</lastName><email>asdf</email><tel>adf</tel></person><contactPerson>false</contactPerson></wg-member><wg-member><person><firstName>asdfa</firstName><lastName>asdf</lastName><email>adsf</email><tel>adfasdf</tel></person><contactPerson>true</contactPerson></wg-member></wg-members><alias>aaaa</alias><address><street>sdfsd</street><zip>fsf</zip><city>sdfds</city></address></wg></wgs>
+</wgs>

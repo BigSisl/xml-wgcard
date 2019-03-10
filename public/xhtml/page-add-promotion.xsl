@@ -3,7 +3,7 @@
     <xsl:import href="page.xsl" />
 
     <xsl:template match="/p:page">
-        <form action="../php/promotion-apply.php" method="POST">
+        <form action="../php/promotion-apply.php" method="POST" onsubmit="return validateForm();">
 			<h4>Neue Vergünstigung hinzufügen</h4>
 			<div class="field">
 				<label>Kunde</label>
@@ -34,5 +34,45 @@
                 <input name="submit" type="submit" value="Promotion hinzufügen!" />
             </div>
         </form>
+		<script>
+            //<![CDATA[
+				function validateForm(){					
+					return validatePromotionInformation();
+				}
+				
+				function validatePromotionInformation(){
+					if(!validatePromotionField("provider", "Kunde")){
+						return false;
+					}
+					
+					if(!validatePromotionField("name", "Bezeichnung")){
+						return false;
+					}
+					
+					if(!validatePromotionField("description", "Beschreibung")){
+						return false;
+					}
+					
+					if(!validatePromotionField("discount", "Rabatt")){
+						return false;
+					}
+					
+					if(!validatePromotionField("amount", "Anzahl")){
+						return false;
+					}
+					
+					return true;
+				}
+				
+				function validatePromotionField(inputName, displayName){
+					var inputValue = $("input[name=" + inputName + "]").val();
+					if(inputValue == ""){
+						alert(displayName + " muss ausgefüllt sein.")
+						return false;
+					}
+					return true
+				}
+            //]]>
+        </script>
     </xsl:template>
 </xsl:stylesheet>

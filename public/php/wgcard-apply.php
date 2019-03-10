@@ -1,4 +1,5 @@
 <?php
+	include 'validation.php';
 	error_reporting(0);
 	$xml = simplexml_load_file('../wgs.xml');
 	
@@ -8,7 +9,7 @@
 	persistXML('../wgs_new.xml', $xml);
 	
 	#validate the temp xml
-	$xml_new_valid = validation('../wgs_new.xml');
+	$xml_new_valid = validation('../wgs_new.xml', '../schemas/wgs.xsd');
 	
 	#store xml into original xml if validation is ok
 	if($xml_new_valid){
@@ -59,22 +60,6 @@
 		$person->addChild('lastName', $_POST['lastname'.$i]);
 		$person->addChild('email', $_POST['mail'.$i]);
 		$person->addChild('tel', $_POST['tel'.$i]);
-	}
-	
-	function validation($xml){
-		$data = file_get_contents($xml);
-		$xmlDoc = new DOMDocument();
-		$xmlDoc->loadXML($data);
-		return validateXML($xmlDoc, '../schemas/wgs.xsd');
-	}
-	
-	function validateXML($xml, $xsd){
-		if(!$xml->schemaValidate($xsd)){
-			return false;
-		}
-		else{
-			return true;
-		}
 	}
 	
 	function persistXML($path, $xml) {

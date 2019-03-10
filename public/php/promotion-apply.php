@@ -1,4 +1,6 @@
 <?php
+	include 'validation.php';
+	error_reporting(0);
 	$xml = simplexml_load_file('../promotions.xml');
 	
 	insertIntoXML($xml);
@@ -7,7 +9,7 @@
 	persistXML('../promotions_new.xml', $xml);
 	
 	#validate the temp xml
-	$xml_new_valid = validation('../promotions_new.xml');
+	$xml_new_valid = validation('../promotions_new.xml', '../schemas/promotions.xsd');
 	
 	#store xml into original xml if validation is ok
 	if($xml_new_valid){
@@ -16,22 +18,6 @@
 	}
 	else{
 		echo "validation failed";
-	}
-	
-	function validation($xml){
-		$data = file_get_contents($xml);
-		$xmlDoc = new DOMDocument();
-		$xmlDoc->loadXML($data);
-		return validateXML($xmlDoc, '../schemas/promotions.xsd');
-	}
-	
-	function validateXML($xml, $xsd){
-		if(!$xml->schemaValidate($xsd)){
-			return false;
-		}
-		else{
-			return true;
-		}
 	}
 	
 	function insertIntoXML($xml) {

@@ -1,8 +1,8 @@
 class Validation {
     static validate(schema, data) {
-        let Reg = data;
+        console.log(schema);
         let validate = Validation.ajv.compile(schema);
-        let valid = validate(Reg);
+        let valid = validate(data);
 
         if(!valid) {
             // override dataPath to get descriptive titles
@@ -44,19 +44,21 @@ class Validation {
         }
     }
 
-    static submit(form, url) {
+    static submit(form, schemaUrl) {
         var form = $(form);
 
         console.log(form);
 
         var url = form.attr('action');
 
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: form.serialize(), // serializes the form's elements.
-            success: Validation.parseServerAnswer
-        });
+        if(Validation.validateForm(form, schemaUrl)) {
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: form.serialize(), // serializes the form's elements.
+                success: Validation.parseServerAnswer
+            });
+        }
     }
 
     static getErrorText(errors) {
@@ -74,7 +76,7 @@ class Validation {
 
     static getFormData(self) {
         var data = {};
-        $(self).serializeArray()
+        self.serializeArray()
             .forEach(element => {
                 data[element.name] = element.value;
             });

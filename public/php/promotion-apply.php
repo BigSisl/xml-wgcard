@@ -18,7 +18,7 @@
     #store xml into original xml if validation is ok
     if($xml_new_valid){
         persistXML('../promotions.xml', $xml);
-        $object->message = "promotion wurde erfolgreich erstellt";
+        $object->message = "Promotion wurde erfolgreich erstellt";
         $object->type = "success";
     }
     else{

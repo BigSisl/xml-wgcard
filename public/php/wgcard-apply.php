@@ -1,15 +1,11 @@
 <?php
-    include 'validation.php';
-    error_reporting(0);
+    include __DIR__ . '/../../lib/xmlutils.php';
+    //error_reporting(0);
     $xml = simplexml_load_file('../wgs.xml');
 
     insertIntoXML($xml);
 
-    #first store xml into temp xml
-    persistXML('../wgs_new.xml', $xml);
-
-    #validate the temp xml
-    $xml_new_valid = validation('../wgs_new.xml', '../schemas/wgs.xsd');
+    $xml_new_valid = validateXML($xml, '../schemas/wgs.xsd');
 
     #store xml into original xml if validation is ok
     if($xml_new_valid){
@@ -68,13 +64,5 @@
         $person->addChild('tel', $_POST['tel'.$i]);
     }
 
-    function persistXML($path, $xml) {
-        $dom = new DOMDocument("1.0");
-        $dom->preserveWhiteSpace = false;
-        $dom->formatOutput = true;
-        $dom->loadXML($xml->asXML());
-        file_put_contents($path, $dom->saveXML());
-    }
 ?>
-
 <a href="../get-wgcard.xml">return</a>

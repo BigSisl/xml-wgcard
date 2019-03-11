@@ -1,6 +1,6 @@
 <?php
-    include 'validation.php';
-    error_reporting(0);
+    include __DIR__ . '/../../lib/xmlutils.php';
+    //error_reporting(0);
     $xml = simplexml_load_file('../promotions.xml');
     $out = $object = (object) [
         'message' => '',
@@ -9,16 +9,11 @@
 
     insertIntoXML($xml);
 
-    #first store xml into temp xml
-    persistXML('../promotions_new.xml', $xml);
-
-    #validate the temp xml
-    $xml_new_valid = validation('../promotions_new.xml', '../schemas/promotions.xsd');
+    $xml_new_valid = validateXML($xml, '../schemas/promotions.xsd');
 
     #store xml into original xml if validation is ok
     if($xml_new_valid){
         persistXML('../promotions.xml', $xml);
-        $object->message = "promotion wurde erfolgreich erstellt";
         $object->type = "success";
     }
     else{
@@ -35,9 +30,6 @@
         $promotion->addChild('amount', $_POST['amount']);
     }
 
-    function persistXML($path, $xml) {
-        file_put_contents($path, $xml->asXML());
-    }
-
+    header('Content-Type: application/json');
     echo json_encode($out);
 ?>

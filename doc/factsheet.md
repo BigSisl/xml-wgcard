@@ -1,5 +1,14 @@
 # Factsheet WGCard Projekt
 
+## Verwendete 3rd Partei Bibliotheken
+
+### Browser
+
+Im Browser habe wir neben dem klassischen JQuery
+als Unterstützung auch ajv.js verwendet. Diese
+Bibliothek hilft beim validieren von JSON Objekten
+mit JSON-Schemas.
+
 ## Promotionaufschalten
 
 Das Aufschalten von Promotionen ist öffentlich und

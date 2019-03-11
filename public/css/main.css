@@ -82,7 +82,7 @@ form .field label {
 form .field input, form .field button {
     border: 0.075em solid #373e48ff;
     background-color: #ffffff;
-    padding: 0.25em 1em;
+    padding: 0.25em 0.25em;
     margin: 0;
 }
 

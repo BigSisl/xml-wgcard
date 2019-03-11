@@ -1,10 +1,45 @@
 
 /* this is the color in our logo, please use this
    for styling:
-    #373e48ff
 */
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 12pt;
+}
 
 body {
     /* same color used as in logo font */
-    color: #aaccffff
+    color: #373e48ff;
+}
+
+
+#header, #footer, #content {
+    width: 36em;
+    margin: auto;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+#header {
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 0.25em solid #373e48ff;
+}
+
+#content {
+    margin-bottom: 2em;
+}
+
+#footer {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    background-color: #aaccffff;
+    border-top: 0.25em solid #373e48ff;
+}
+@media only screen and (max-width: 640px) {
+    #header, #footer, #content {
+        width: calc(100% - 4em);
+    }
 }

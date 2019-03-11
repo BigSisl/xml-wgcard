@@ -8,7 +8,7 @@
         "members": {
           "type": "array",
           "items": {
-            {"$ref": "#/definitions/wg_member"}
+            "$ref": "#/definitions/wg_member"
           },
           "uniqueItems": true
         },
@@ -24,7 +24,7 @@
         "year": {
           "type": "integer",
           "minimum": 1900,
-          "maximum": 2100,
+          "maximum": 2100
         },
         "month": {
           "type": "integer",
@@ -54,7 +54,7 @@
           "type": "string",
           "enum": ["male", "female"]
         },
-        "birthday": { "$ref": "#/definitions/date" }
+        "birthday": { "$ref": "#/definitions/date" },
         "first_name": { "type": "string" },
         "last_name": { "type": "string" },
         "email": { "type": "string" },

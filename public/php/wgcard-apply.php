@@ -16,15 +16,17 @@
         echo "validation failed";
     }
 
-    function insertIntoXML($xml) {
+    function generateNewId($xml) {
         $xml->registerXPathNamespace('w', 'http://wgcard.xml.hslu.ch/wgs');
         $ids = array_map(function($e) {
             return (int)$e->id;
         }, $xml->xpath("//w:wg/@id"));
-        $new_id = $ids ? max($ids) + 1 : 1;
+        return $ids ? max($ids) + 1 : 1;
+    }
 
+    function insertIntoXML($xml) {
         $wg = $xml->addChild('wg', '');
-        $wg->addAttribute('id', $new_id);
+        $wg->addAttribute('id', generateNewId($xml));
 
         $wg_members = $wg->addChild('wg-members', '');
 

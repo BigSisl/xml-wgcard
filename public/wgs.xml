@@ -113,4 +113,32 @@
       <city>Z&#xFC;rich</city>
     </address>
   </wg>
+  <wg id="5">
+    <wg-members>
+      <wg-member>
+        <person>
+          <firstName>test</firstName>
+          <lastName>testa</lastName>
+          <email>test@test.com</email>
+          <tel>000 000 00 00</tel>
+        </person>
+        <contactPerson>true</contactPerson>
+      </wg-member>
+      <wg-member>
+        <person>
+          <firstName>test</firstName>
+          <lastName>testa</lastName>
+          <email>test@test.com</email>
+          <tel>000 000 00 00</tel>
+        </person>
+        <contactPerson>true</contactPerson>
+      </wg-member>
+    </wg-members>
+    <alias>WGTEST</alias>
+    <address>
+      <street>Deheime</street>
+      <zip>8000</zip>
+      <city>Z&#xFC;rich</city>
+    </address>
+  </wg>
 </wgs>

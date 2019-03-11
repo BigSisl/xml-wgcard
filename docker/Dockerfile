@@ -13,4 +13,4 @@ WORKDIR /app
 
 EXPOSE 8000
 
-CMD [ "/bin/bash", "cd ./public && php -S 0.0.0.0:8000" ]
+CMD cd /app/public && php -S 0.0.0.0:8000

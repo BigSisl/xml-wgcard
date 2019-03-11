@@ -36,8 +36,10 @@
 					</div>
                 </div>
             </div>
-            <!-- some js to add another member -->
-            <button name="addmember">WG Mitglied hinzufügen.</button>
+
+            <div class="field">
+                <button name="addmember">WG Mitglied hinzufügen.</button>
+            </div>
 
 			<h5>WG Adresse</h5>
 			
@@ -61,7 +63,7 @@
                 <input type="text" name="city" />
             </div>
 			
-			<input style="visibility:hidden;" type="text" name="membercount" value="1"/>
+			<input type="hidden" name="membercount" value="1"/>
 			
             <div class="field">
                 <input name="submit" type="submit" value="WG Card bestellen!" />

@@ -15,15 +15,20 @@
                 <title><xsl:value-of select="/p:page/@title" /></title>
             </head>
             <body>
-                <div id="header">
-                    <a href="index.xml">
-						<img src="img/logo.png" alt="WG Card Logo" />
-					</a>
+                <div id="header" class="container">
+                    <a href="index.xml" class="logo">
+                        <img src="img/logo.png" alt="WG Card Logo" />
+                    </a>
+                    <p class="headline">Vergünstigungen für deine WG!</p>
+                    <div class="clear" />
                 </div>
-                <div id="content">
+                <div id="content" class="container">
                     <xsl:apply-templates />
                 </div>
-                <div id="footer">HSLU 2019</div>
+                <div id="footer" class="container">
+                    <p class="module">HSLU 2019 XML</p>
+                    <p class="author">Fabian Brand, Lucien Zürcher, Moritz Küttel</p>
+                </div>
             </body>
         </html>
     </xsl:template>

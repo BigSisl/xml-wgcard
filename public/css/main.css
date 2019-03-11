@@ -1,32 +1,52 @@
 
 /* this is the color in our logo, please use this
    for styling:
+
+   #aaccff (blueish)
+   #9ee493 (greenish)
+   #373e48 (blackish)
+   #F2F5Fa (whiteish)
 */
 
 html, body {
     padding: 0;
     margin: 0;
+}
+
+html, body, input, button {
     font-size: 12pt;
     font-family: 'Roboto', sans-serif;
-}
-
-body {
-    /* same color used as in logo font */
     color: #373e48ff;
+    background-color: #f2F5FA;
 }
 
 
-#header, #footer, #content {
-    width: 36em;
-    margin: auto;
-    padding-right: 2em;
-    padding-left: 2em;
+.clear {
+    clear: both;
 }
+
+.container {
+   width: 36em;
+   margin: auto;
+   padding-right: 2em;
+   padding-left: 2em;
+}
+
 
 #header {
     margin-top: 1em;
     padding-bottom: 1em;
     border-bottom: 0.25em solid #373e48ff;
+}
+
+#header .logo {
+    display: block;
+    float: left;
+}
+
+#header .headline {
+    font-style: italic;
+    text-align: right;
 }
 
 #content {
@@ -39,8 +59,58 @@ body {
     background-color: #aaccffff;
     border-top: 0.25em solid #373e48ff;
 }
+
+#footer .module {
+    display: inline-block;
+    float: left;
+}
+#footer .author {
+    text-align: right;
+}
+
+form .field {
+    display: block;
+    margin-top: 0.5em;
+}
+
+form .field label {
+    display: block;
+    float: left;
+    width: 10em;
+}
+
+form .field input, form .field button {
+    border: 0.075em solid #373e48ff;
+    background-color: #ffffff;
+    padding: 0.25em 1em;
+    margin: 0;
+}
+
+form .field button, form .field input[type=submit] {
+    display: block;
+    margin-left: 10em;
+    background-color: #aaccffff;
+    border: 0;
+    outline: 0.075em solid #373e48ff;
+    box-shadow: 0.25em 0.25em 0.075em #373e48ff;
+    padding: 0.25em 1em;
+}
+
+
+form .field button:hover, form .field input[type=submit]:hover {
+    background-color: #9ee493;
+}
+
+
+form .field button:active, form .field input[type=submit]:active {
+    background-color: #9ee493;
+    margin-top: 0.125em;
+    text-shadow: 0em 0em 0.25em #F2F5Fa;
+}
+
+
 @media only screen and (max-width: 640px) {
-    #header, #footer, #content {
+    .container {
         width: calc(100% - 4em);
     }
 }

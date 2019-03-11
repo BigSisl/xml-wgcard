@@ -1,18 +1,32 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="xhtml/page-promotions.xsl"?>
 <promotions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/promotions" xsi:schemaLocation="http://wgcard.xml.hslu.ch/promotions schemas/promotions.xsd">
-    <promotion added="2019-10-10">
-        <name>test</name>
-        <description>description</description>
-        <discount>10%</discount>
-        <provider>Test GMBH</provider>
-        <amount>10</amount>
-    </promotion>
-    <promotion added="2019-03-10">
-        <name>asdf</name>
-        <description>asdf</description>
-        <discount>12</discount>
-        <provider>asdf</provider>
-        <amount>12</amount>
-    </promotion>
-<promotion added="2019-03-11"><name>Ich verkaufe</name><description>Beschreibung</description><discount>20%</discount><provider>Hans zimmer</provider><amount>10</amount></promotion></promotions>
+  <promotion token="0b3cea4fa1bcc1da3318e87f45dcc31eccc7c99adf0844548fb2d51addf82d92" added="2019-10-10">
+    <name>test</name>
+    <description>description</description>
+    <discount>10%</discount>
+    <provider>Test GMBH</provider>
+    <amount>10</amount>
+  </promotion>
+  <promotion token="fba864f3cec57344bfbf4057b14c4da1b05a5e9db8c53d70b3dc5801eb399568" added="2019-03-10">
+    <name>asdf</name>
+    <description>asdf</description>
+    <discount>12</discount>
+    <provider>asdf</provider>
+    <amount>12</amount>
+  </promotion>
+  <promotion token="14901baeb5e30ec5de606a7c42112d88e467ebad0c19ce7dff602cbfb61f051e" added="2019-03-11">
+    <name>Ich verkaufe</name>
+    <description>Beschreibung</description>
+    <discount>20%</discount>
+    <provider>Hans zimmer</provider>
+    <amount>10</amount>
+  </promotion>
+  <promotion token="5a47b649b374f9751c4ae22b09e0453f26bda0a580c0cfa4c978943bbedc0b02" added="2019-03-11">
+    <name>Secure 128 bit Tokens!!!!!</name>
+    <description>Now 90% Rebate on way too long 128 bit securely generated tokens! Thanks to PHP 7</description>
+    <discount>90%</discount>
+    <provider>Mc Token Maker</provider>
+    <amount>9001</amount>
+  </promotion>
+</promotions>

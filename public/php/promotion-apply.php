@@ -21,8 +21,16 @@
         $object->message = "validation failed";
     }
 
+    function generateToken() {
+        // secure random number generation, 128 bit.
+        // this is not feasibly brute-forcable, not even by
+        // this application itself and won't collide
+        return bin2hex(random_bytes(32));
+    }
+
     function insertIntoXML($xml) {
         $promotion = $xml->addChild('promotion', '');
+        $promotion->addAttribute('token', generateToken());
         $promotion->addAttribute('added', date('Y-m-d'));
         $promotion->addChild('name', $_POST['name']);
         $promotion->addChild('description', $_POST['description']);

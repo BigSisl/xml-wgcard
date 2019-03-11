@@ -9,6 +9,9 @@
                 <link href="css/fonts.css" rel="stylesheet" type="text/css" />
                 <link href="css/main.css" rel="stylesheet" type="text/css" />
                 <script src="js/jquery-3.3.1.min.js" type="application/javascript" lang="javascript"></script>
+                <script src="js/ajv-6.10.0.min.js" type="application/javascript" lang="javascript"></script>
+                <script src="js/ajv-i18n-3.4.0.min.js" type="application/javascript" lang="javascript"></script>
+                <script src="js/validation.js" type="application/javascript" lang="javascript"></script>
 
                 <xsl:apply-templates select="/p:page/p:head-add" />
 
@@ -32,7 +35,7 @@
             </body>
         </html>
     </xsl:template>
-	
+
     <xsl:template match="//p:head-add">
         <xsl:copy-of select="*" />
     </xsl:template>

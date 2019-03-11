@@ -114,3 +114,26 @@ form .field button:active, form .field input[type=submit]:active {
         width: calc(100% - 4em);
     }
 }
+
+/* widgets */
+
+#message {
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+#message.error {
+    border: 2px solid #ff4d4d;
+    background-color: #ffcccc;
+}
+
+#message.success {
+    border: 2px solid #267326;
+    background-color: #c6ecc6;
+}

@@ -3,11 +3,11 @@
     <xsl:import href="page.xsl" />
 
     <xsl:template match="/p:page">
-		<ul>
-			<li><a href="get-wgcard.xml">Hol dir jetzt die neue WG Card!</a></li>
-			<li><a href="add-promotion.xml">Schalte eine neue Vergünstigung auf!</a></li>
-			<li><a href="wgs.xml">Bereits registrierte WG's</a></li>
-			<li><a href="promotions.xml">Bereits aufgeschaltete Vergünstigungen</a></li>
-		</ul>
+        <ul>
+            <li><a href="get-wgcard.xml">Hol dir jetzt die neue WG Card!</a></li>
+            <li><a href="add-promotion.xml">Schalte eine neue Vergünstigung auf!</a></li>
+            <li><a href="wgs.xml">Bereits registrierte WG's</a></li>
+            <li><a href="promotions.xml">Bereits aufgeschaltete Vergünstigungen</a></li>
+        </ul>
     </xsl:template>
 </xsl:stylesheet>

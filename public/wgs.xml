@@ -29,7 +29,7 @@
             <city>Hochdorf</city>
         </address>
     </wg>
-	<wg>
+    <wg>
         <wg-members>
             <wg-member>
                 <person>
@@ -57,32 +57,32 @@
             <city>Hochdorf</city>
         </address>
     </wg>
-	<wg>
-		<wg-members>
-			<wg-member>
-				<person>
-					<firstName>Fabian</firstName>
-					<lastName>Brand</lastName>
-					<email>asdfasdf</email>
-					<tel>asdfadfasdf</tel>
-				</person>
-				<contactPerson>true</contactPerson>
-			</wg-member>
-			<wg-member>
-				<person>
-					<firstName>Max</firstName>
-					<lastName>Bader</lastName>
-					<email>asdf</email>
-					<tel>adfasd</tel>
-				</person>
-				<contactPerson>false</contactPerson>
-			</wg-member>
-		</wg-members>
-		<alias>Super wg</alias>
-		<address>
-			<street>asdfasd</street>
-			<zip>asdfas</zip>
-			<city>dasdfas</city>
-		</address>
-	</wg>
+    <wg>
+        <wg-members>
+            <wg-member>
+                <person>
+                    <firstName>Fabian</firstName>
+                    <lastName>Brand</lastName>
+                    <email>asdfasdf</email>
+                    <tel>asdfadfasdf</tel>
+                </person>
+                <contactPerson>true</contactPerson>
+            </wg-member>
+            <wg-member>
+                <person>
+                    <firstName>Max</firstName>
+                    <lastName>Bader</lastName>
+                    <email>asdf</email>
+                    <tel>adfasd</tel>
+                </person>
+                <contactPerson>false</contactPerson>
+            </wg-member>
+        </wg-members>
+        <alias>Super wg</alias>
+        <address>
+            <street>asdfasd</street>
+            <zip>asdfas</zip>
+            <city>dasdfas</city>
+        </address>
+    </wg>
 </wgs>

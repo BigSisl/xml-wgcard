@@ -1,69 +1,69 @@
 {
-	"$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "WG list",
     "definitions": {
-		"wg": {
-			"type": "object",
-			"properties": {
-				"members": {
-					"type": "array",
-					"items": {
-						{"$ref": "#/definitions/wg_member"}
-					},
-					"uniqueItems": true
-				},
-				"alias": { "type": "string" },
-				"address": { "type": "string" },
-				"plz": { "type": "integer" }
-			},
-			"required": ["members", "alias", "address", "plz"]
-		},
-		"date": {
-			"type": "object",
-			"properties": {
-				"year": {
-					"type": "integer",
-					"minimum": 1900,
-					"maximum": 2100,
-				},
-				"month": {
-					"type": "integer",
-					"minimum": 1,
-					"maximum": 12
-				},
-				"day": {
-					"type": "integer",
-					"minimum": 1,
-					"maximum": 31
-				}
-			},
-			"required": ["year", "month", "day"]
-		},
-		"wg_member": {
-			"type": "object",
-			"properties": {
-				"contact_person": { "type": "boolean" },
-				"member": { "$ref": "#/definitions/person" }
-			},
-			"required": ["contact_person", "member"]
-		},
-		"person": {
-			"type": "object",
-			"properties": {
-				"gender": {
-					"type": "string",
-					"enum": ["male", "female"]
-				},
-				"birthday": { "$ref": "#/definitions/date" }
-				"first_name": { "type": "string" },
-				"last_name": { "type": "string" },
-				"email": { "type": "string" },
-				"tel": { "type": "string" }
-			},
-			"required": ["birthday", "first_name", "last_name", "email", "tel"]
-		}
+    "wg": {
+      "type": "object",
+      "properties": {
+        "members": {
+          "type": "array",
+          "items": {
+            {"$ref": "#/definitions/wg_member"}
+          },
+          "uniqueItems": true
+        },
+        "alias": { "type": "string" },
+        "address": { "type": "string" },
+        "plz": { "type": "integer" }
+      },
+      "required": ["members", "alias", "address", "plz"]
     },
-	"type": "array",
-	"items": { "$ref": "#/definitions/wg" },
-	"uniqueItems": true
+    "date": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2100,
+        },
+        "month": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "day": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 31
+        }
+      },
+      "required": ["year", "month", "day"]
+    },
+    "wg_member": {
+      "type": "object",
+      "properties": {
+        "contact_person": { "type": "boolean" },
+        "member": { "$ref": "#/definitions/person" }
+      },
+      "required": ["contact_person", "member"]
+    },
+    "person": {
+      "type": "object",
+      "properties": {
+        "gender": {
+          "type": "string",
+          "enum": ["male", "female"]
+        },
+        "birthday": { "$ref": "#/definitions/date" }
+        "first_name": { "type": "string" },
+        "last_name": { "type": "string" },
+        "email": { "type": "string" },
+        "tel": { "type": "string" }
+      },
+      "required": ["birthday", "first_name", "last_name", "email", "tel"]
+    }
+    },
+  "type": "array",
+  "items": { "$ref": "#/definitions/wg" },
+  "uniqueItems": true
 }

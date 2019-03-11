@@ -1,5 +1,18 @@
 # Factsheet WGCard Projekt
 
+
+## Inhalt des Fact Sheet (von Vorlesungsfolien / delete me afterwards please)
+ * Finale Version der Konzept
+ * Präsentation als Fliesstext
+ * Kunde, Dienstleistung, Innovation, Marktumfeld, ...
+ * URL zu Ihrer Plattform
+ * Architektur
+ * Diagramm
+ * Verwendete Frameworks
+ * Technische Stolpersteine
+ * Rechtfertigung für jeden (!) Einsatz von nicht XML Technologien
+ * Fazit
+
 ## Verwendete 3rd Partei Bibliotheken
 
 ### Browser

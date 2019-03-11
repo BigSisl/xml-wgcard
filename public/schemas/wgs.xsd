@@ -7,52 +7,53 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-	
-	<xs:element name="wg">
-		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element ref="wg-members"/>
-				<xs:element name="alias" type="xs:string"/>
-				<xs:element ref="address"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	
-	<xs:element name="wg-member">
-		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element ref="person"/>
-				<xs:element name="contactPerson" type="xs:boolean"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-        
-	<xs:element name="wg-members">
-		<xs:complexType>
-			<xs:sequence minOccurs="2" maxOccurs="12">
-				<xs:element ref="wg-member"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	
-	<xs:element name="address">
-		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="street" type="xs:string"/>
-				<xs:element name="zip" type="xs:string"/>
-				<xs:element name="city" type="xs:string"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	
-	<xs:element name="person">
-		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="firstName" type="xs:string"/>
-				<xs:element name="lastName" type="xs:string"/>
-				<xs:element name="email" type="xs:string"/>
-				<xs:element name="tel" type="xs:string"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+
+    <xs:element name="wg">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element ref="wg-members"/>
+                <xs:element name="alias" type="xs:string"/>
+                <xs:element ref="address"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:int" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="wg-member">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element ref="person"/>
+                <xs:element name="contactPerson" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="wg-members">
+        <xs:complexType>
+            <xs:sequence minOccurs="2" maxOccurs="12">
+                <xs:element ref="wg-member"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="address">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element name="street" type="xs:string"/>
+                <xs:element name="zip" type="xs:string"/>
+                <xs:element name="city" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="person">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element name="firstName" type="xs:string"/>
+                <xs:element name="lastName" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="tel" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>

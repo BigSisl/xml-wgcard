@@ -5,7 +5,7 @@
     <xsl:template match="/p:page">
         <pre id="message" class="hide">
         </pre>
-        <form action="../php/promotion-apply.php" method="POST" onsubmit="return Validation.validateForm(this, '/schemas/add-promotion.schema.json')">
+        <form action="../php/promotion-apply.php" method="POST">
             <h4>Neue Vergünstigung hinzufügen</h4>
             <div class="field">
                 <label>Kunde</label>
@@ -43,6 +43,11 @@
                 Validation.addDescriptiveType("discount", "Rabatt");
                 Validation.addDescriptiveType("amount", "Anzahl");
                 Validation.addDescriptiveType("description", "Beschreibung");
+
+                $('form').submit(function(e) {
+                    e.preventDefault();
+                    Validation.submit(this, '/schemas/add-promotion.schema.json');
+                });
             //]]>
         </script>
     </xsl:template>

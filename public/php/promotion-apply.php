@@ -2,6 +2,10 @@
     include 'validation.php';
     error_reporting(0);
     $xml = simplexml_load_file('../promotions.xml');
+    $out = $object = (object) [
+        'message' => '',
+        'type' => 'error'
+    ];
 
     insertIntoXML($xml);
 
@@ -14,10 +18,11 @@
     #store xml into original xml if validation is ok
     if($xml_new_valid){
         persistXML('../promotions.xml', $xml);
-        echo "promotion was successfully added";
+        $object->message = "promotion wurde erfolgreich erstellt";
+        $object->type = "success";
     }
     else{
-        echo "validation failed";
+        $object->message = "validation failed";
     }
 
     function insertIntoXML($xml) {
@@ -33,6 +38,6 @@
     function persistXML($path, $xml) {
         file_put_contents($path, $xml->asXML());
     }
-?>
 
-<a href="../add-promotion.xml">return</a>
+    echo json_encode($out);
+?>

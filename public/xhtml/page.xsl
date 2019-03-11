@@ -6,8 +6,11 @@
         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
             <head>
                 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
                 <link href="css/fonts.css" rel="stylesheet" type="text/css" />
                 <link href="css/main.css" rel="stylesheet" type="text/css" />
+
                 <script src="js/jquery-3.3.1.min.js" type="application/javascript" lang="javascript"></script>
                 <script src="js/ajv-6.10.0.min.js" type="application/javascript" lang="javascript"></script>
                 <script src="js/ajv-i18n-3.4.0.min.js" type="application/javascript" lang="javascript"></script>

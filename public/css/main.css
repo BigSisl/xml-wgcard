@@ -113,6 +113,15 @@ form .field button:active, form .field input[type=submit]:active {
     .container {
         width: calc(100% - 4em);
     }
+
+    form .field label {
+        width: auto;
+        float: none;
+    }
+
+    form .field button, form .field input[type=submit] {
+        margin-left: 0;
+    }
 }
 
 /* widgets */

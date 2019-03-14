@@ -22,7 +22,7 @@ als Unterstützung auch ajv.js verwendet. Diese
 Bibliothek hilft beim validieren von JSON Objekten
 mit JSON-Schemas.
 
-## Promotionaufschalten
+## Promotion aufschalten
 
 Das Aufschalten von Promotionen ist öffentlich und
 kann unter /add-promotion.xml gemacht werden. Die
@@ -33,8 +33,12 @@ Wenn eine Promotion erstellt wird, erhält man ein
 randomisiertes Token. Dieses Token ermöglicht dem
 Ersteller das abziehen von genutzten Vergünstigungen.
 
-TODO:
+## Promotion einlösen
 
-Dies kann durch den Link ... ein Eingabe des Tokens
-bewerkstelligt werden. Es wurden keine
-Sicherheitsmassnahmen gegen Bruteforceattecken implementiert.
+TODO:
+Durch das Token kann auf die Promotion zugegriffen werden.
+Der Link /promotion_access.xml ermöglicht die Eingabe des Tokens
+mit einer id, welche wg diese Promotion nutzt.
+Es wurden keine Sicherheitsmassnahmen gegen Bruteforceattecken implementiert
+und die Tokens können durch die promotion xml dokumente ungesichert zugegriffen werden.
+Wichtig als Hinweis für ein zukünftige Verbesserung.

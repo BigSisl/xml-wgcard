@@ -5,7 +5,7 @@
     <xsl:template match="/p:page">
         <pre id="message" class="hide">
         </pre>
-        <form action="../php/promotion-apply.php" method="POST">
+        <form action="../php/add-promotion.php" method="POST">
             <h4>Neue Vergünstigung hinzufügen</h4>
             <div class="field">
                 <label>Kunde</label>

@@ -32,7 +32,7 @@ class Validation {
 
     static parseServerAnswer(data) {
         try {
-            let json = JSON.parse(data);
+            let json = data;
             if(json.type == 'success') {
                 Validation.setSuccess(json.message);
             } else {

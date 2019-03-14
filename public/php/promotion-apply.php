@@ -7,14 +7,20 @@
         'type' => 'error'
     ];
 
-    insertIntoXML($xml);
+    $promotion = insertIntoXML($xml);
 
     $xml_new_valid = validateXML($xml, '../schemas/promotions.xsd');
 
     #store xml into original xml if validation is ok
     if($xml_new_valid){
         persistXML('../promotions.xml', $xml);
-        $object->message = "Promotion wurde erfolgreich erstellt";
+        $object->message = <<<EOT
+Promotion wurde erfolgreich erstellt.
+
+Ihr Zugriffstoken für diese Promotion (bitte speichern):
+
+EOT;
+        $object->message .= $promotion["token"];
         $object->type = "success";
     }
     else{
@@ -37,6 +43,7 @@
         $promotion->addChild('discount', $_POST['discount']);
         $promotion->addChild('provider', $_POST['provider']);
         $promotion->addChild('amount', $_POST['amount']);
+        return $promotion;
     }
 
     header('Content-Type: application/json');

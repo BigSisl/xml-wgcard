@@ -20,7 +20,7 @@
         },
         "amount": {
             "type": "string",
-            "pattern": "[0-9]+"
+            "pattern": "^[1-9][0-9]*$"
         }
     },
     "required": [

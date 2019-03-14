@@ -29,4 +29,235 @@
     <provider>Mc Token Maker</provider>
     <amount>9001</amount>
   </promotion>
+  <promotion token="86b75cc52234fef046bb04b76f9426942fb01136503a81db5db5d664392152f4" added="2019-03-14">
+    <name>Zuercher</name>
+    <description>Beschreibung</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>15</amount>
+  </promotion>
+  <promotion token="8685a925ab1afa7a26cc20c7961f9b1485185436e55e216edfc799e7efe1945a" added="2019-03-14">
+    <name>Zuercher</name>
+    <description>Beschreibung</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>15</amount>
+  </promotion>
+  <promotion token="8714dcbb36017b63fef6eac0e183c27aaa04b79a2a570406198120fcd3afb03a" added="2019-03-14">
+    <name>Zuercher</name>
+    <description>Beschreibung</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>15</amount>
+  </promotion>
+  <promotion token="0241658f2d017406e1db459af7404edfe8e761afb17f3fdda6aa4cc3067a5f29" added="2019-03-14">
+    <name>Zuercher</name>
+    <description>Beschreibung</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>15</amount>
+  </promotion>
+  <promotion token="ffdcc32d27752fdc3f91e3e24962890550b999b80ba20a2a63cd64bfecb4965a" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="8c1b694e2c192b80f7753f81f5b2fcada3f6a8009dc4d6d0ac921aedbf7fe4fa" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="05476d6d23932708ad470dd49029a4531988bdb632ff877e3096d54de50c0f85" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="44a1b9129f5653359df8449d2cfd57ef1b5e442052405b9b35d59e0047f1749e" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="d615b41db684340a31f8b2593e29ab9bfeacef19cf92a2d076c9853ef49e2c98" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="d6b2a2a7fcf9a4f74c9e68584c3ec0746f98094dfb588a45df37c873332729f2" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="25cd40a3f9844a330dfc237e6d54769d77f23b2cb278ee86d3d70306f50528de" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="f01db046d90aa521f5dcb7cfe54b99d9034c655d34320d2e735671042506807d" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="5d94e22996df2e625f80cfb8c1f89aa6f4e929c0bfe21ada34cf56d616668f4f" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="82832bab1679728046ad8810c9c7b38d12eba6eb5f001606ea18bb4e531fc0d5" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-3</amount>
+  </promotion>
+  <promotion token="63ac23bef749c2d23e6db9bebe2e6a27e14d36c9cc671d279698847d2412ff30" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-2</amount>
+  </promotion>
+  <promotion token="32a0d97f8b5cfaa66d567d4e26c561d817750f619dc8eaa4fcadaa8b7d2c588b" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-2</amount>
+  </promotion>
+  <promotion token="e48f0bcc1c617fce28d741e615ce9637199ebd4e8bb9a61114b73ab369347b86" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-2</amount>
+  </promotion>
+  <promotion token="10c2dae77a325ebdf6b6b655e75f5b5c0450c89ffe7e5ecc6515664cec99b145" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>2</amount>
+  </promotion>
+  <promotion token="e9127652d0f3583edf9e7711a522baa519aa9f5bc12ccbe66690981121529be2" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>-4</amount>
+  </promotion>
+  <promotion token="24f080d98bd002a8e14a8f3a0e5c7bda3a7c120fc07a3d58b7af43934d140f04" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>0</amount>
+  </promotion>
+  <promotion token="e00e34b571ebe8ecbd07619ceed67738acfc60e728b59b7b954d7fbf9c98b229" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>3</amount>
+  </promotion>
+  <promotion token="5c80e716f8e050778b08354ca62e52cccd69ee7cf437f9e8fd48fed8d358a5ff" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>3</amount>
+  </promotion>
+  <promotion token="6562f5429953b05be7cf202132e30c375a299a47f689a983cbfb6fcc84cdf763" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>3</amount>
+  </promotion>
+  <promotion token="8bdd684fb96eb8f5474f2d7b7559353a3e204efd8c5c7e12bc145b6f34a31fb3" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>3</amount>
+  </promotion>
+  <promotion token="a34aeb7477fc10dec99670eb2415a89b74a61ad81e966c5b079e94f5d81bdc18" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>3</amount>
+  </promotion>
+  <promotion token="b7efd25b1ca123ff164b7cf05546f439cb5706460fbcb577a3d467a78c30f557" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>3</amount>
+  </promotion>
+  <promotion token="b62941ad3b480fdf9adb96f6152d018075b2fa87c5e2d078d6e7c164ac84ace4" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>3</amount>
+  </promotion>
+  <promotion token="7cca0a7d313fc588c3626575620ef80c9f174f7c42059fa8de3af39945197453" added="2019-03-14">
+    <name>hallo</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>3</amount>
+  </promotion>
+  <promotion token="bba61bf64c0dd16d17cdf43e182642b5305ca26af5bd228d3312af8d5a8acf93" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>1</amount>
+  </promotion>
+  <promotion token="0c46334691bcada418b29509493c16ff19ab1d54319e38a399c5d017a5bbe7da" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>1</amount>
+  </promotion>
+  <promotion token="55096c5209e446694335b56fc287f1f4c0620e3c06bed2ee21ffbf85d0884e04" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>1</amount>
+  </promotion>
+  <promotion token="41827e5c9b3c7cfdaa199c80ada148a25f3beadc07e72e8be58c8fd529248329" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>1</amount>
+  </promotion>
+  <promotion token="f002ff88bd1980c5696892667565806e2d5b39065c4609d5a1c1d190d3dc1f7c" added="2019-03-14">
+    <name>Lucien</name>
+    <description>Access to the computers in the TinCan bureo</description>
+    <discount>20%</discount>
+    <provider>Lucien</provider>
+    <amount>2</amount>
+  </promotion>
 </promotions>

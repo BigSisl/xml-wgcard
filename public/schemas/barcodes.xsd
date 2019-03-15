@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://wgcard.xml.hslu.ch/promotions"
+    targetNamespace="http://wgcard.xml.hslu.ch/barcodes"
+    elementFormDefault="qualified">
+    <!-- used for validating promotion XML input of businesses and partially our database
+    Note: we may need to extend this to include the businesses name in the
+    case of adding a promotion
+    -->
+    <xs:element name="barcodes">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="barcode">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:hexBinary">
+                                <xs:attribute name="wg-id" type="xs:integer" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

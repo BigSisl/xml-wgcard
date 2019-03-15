@@ -3,6 +3,11 @@
     <xsl:import href="page.xsl" />
 
     <xsl:template match="/p:page/p:content">
+        <ul>
+            <li><a href="index.xml">Home</a></li>
+            <li><a href="get-wgcard.xml">Neue WG</a></li>
+            <li><a class="active" href="add-promotion.xml">Neue Vergünstigung</a></li>
+        </ul>
         <pre id="message" class="hide">
         </pre>
         <form action="../php/add-promotion.php" method="POST">

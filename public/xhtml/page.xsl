@@ -11,6 +11,7 @@
                 <link href="/css/fonts.css" rel="stylesheet" type="text/css" />
                 <link href="/css/main.css" rel="stylesheet" type="text/css" />
 				<link href="/css/navigation.css" rel="stylesheet" type="text/css" />
+                <link href="/css/promotion-style.css" rel="stylesheet" type="text/css" />
 
                 <script src="/js/jquery-3.3.1.min.js" type="application/javascript" lang="javascript"></script>
                 <script src="/js/ajv-6.10.0.min.js" type="application/javascript" lang="javascript"></script>
@@ -30,11 +31,6 @@
                     <div class="clear" />
                 </div>
                 <div id="content" class="container">
-					<ul>
-						<li><a class="active" href="index.xml">Home</a></li>
-						<li><a href="get-wgcard.xml">Neue WG</a></li>
-						<li><a href="add-promotion.xml">Neue Vergünstigung</a></li>
-					</ul>
                     <xsl:apply-templates />
                 </div>
                 <div id="footer" class="container">

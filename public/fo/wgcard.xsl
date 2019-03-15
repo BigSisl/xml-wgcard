@@ -4,8 +4,10 @@
     xmlns:fo="http://www.w3.org/1999/XSL/Format"
     xmlns:wg="http://wgcard.xml.hslu.ch/wgs">
 
+    <xsl:import href="../svg/code128.xsl"/>
+
     <xsl:template match="/">
-        <fo:root>
+        <fo:root font-size="12pt">
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="letter" page-height="29.7cm" page-width="21cm" margin-top="1cm" margin-bottom="2cm" margin-left="2.5cm" margin-right="2.5cm">
                     <fo:region-body margin-top="2cm"/>
@@ -64,7 +66,7 @@
         </fo:block>
 
         <fo:block margin-bottom="12pt">
-            Es freut uns das eure WG nun Teil der WGCard Platform ist nun von tollen Vergünsitungen in deiner Region profitieren kann. In diesem Brief findet ihr nun eure WGCards. Ihr könnt diese einfach vorweisen bei Geschäften welche eine Promotion auf WGCard aufgeschalten habt, um von den Vergünstigungen zu profitieren!
+            Es freut uns das eure WG nun Teil der WGCard Platform ist nun von tollen Vergünsitungen in deiner Region profitieren kann. In diesem Brief findet ihr nun eure WGCards. Ihr könnt diese einfach vorweisen bei Geschäften welche eine Promotion auf WGCard aufgeschalten haben, um von den Vergünstigungen zu profitieren!
         </fo:block>
 
         <fo:block>
@@ -84,6 +86,15 @@
             WG Card von <xsl:value-of select="wg:person/wg:firstName"/>
                         <xsl:text>&#x20;</xsl:text>
                         <xsl:value-of select="wg:person/wg:lastName"/>
+
+           <fo:instream-foreign-object content-width="100%" content-height="100%">
+              <xsl:call-template name="barcode-code128">
+                <xsl:with-param name="value" select="'067023611120229212'"/>
+                <xsl:with-param name="subset" select="'C'"/>
+                <!-- <xsl:with-param name="string" select=""/> -->
+              </xsl:call-template>
+            </fo:instream-foreign-object>
+
         </fo:block>
     </xsl:template>
 

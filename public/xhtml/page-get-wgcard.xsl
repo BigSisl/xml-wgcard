@@ -43,7 +43,7 @@
             </div>
 
             <div class="field">
-                <button name="addmember">WG Mitglied hinzufügen.</button>
+                <input name="addmember" type="button" value="WG Mitglied hinzufügen" onclick="addWGMember();" />
             </div>
 
             <h5>WG Adresse</h5>
@@ -75,6 +75,4 @@
             </div>
         </form>
     </xsl:template>
-    <!-- see js/get-wgcard.js for the javascript ;)
-         get-wgcard.xml adds a script tag via page:head-add -->
 </xsl:stylesheet>

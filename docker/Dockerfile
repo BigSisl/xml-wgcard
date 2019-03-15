@@ -1,8 +1,8 @@
-FROM php:7
+FROM php:7.1-jessie
 
 # install tools
 RUN apt-get update && \
-    apt-get install wget
+    apt-get install -y wget fop
 
 # install composer
 RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/76a7060ccb93902cd7576b67264ad91c8a2700e2/web/installer \

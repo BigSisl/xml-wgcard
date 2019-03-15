@@ -1,8 +1,17 @@
 <?xml version="1.0" ?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml" xmlns:pr="http://wgcard.xml.hslu.ch/promotions">
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:p="http://wgcard.xml.hslu.ch/page"
+    xmlns:pr="http://wgcard.xml.hslu.ch/promotions">
     <xsl:import href="page.xsl" />
 
-    <xsl:template match="pr:promotion">
+    <xsl:template match="p:page">
+        <xsl:apply-templates select="document('../promotions.xml')" />
+    </xsl:template>
+
+
+    <xsl:template match="//pr:promotion">
         <h2><xsl:value-of select="pr:name"/></h2>
         <b>Aufgeschaltet: </b><xsl:value-of select="@added"/><br/>
         <b>Anbieter: </b><xsl:value-of select="pr:provider"/><br/>

@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="xhtml/page-wgs.xsl"?>
-<wgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/wgs" xsi:schemaLocation="http://wgcard.xml.hslu.ch/wgs schemas/wgs.xsd">
+<wgs
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://wgcard.xml.hslu.ch/wgs"
+    xsi:schemaLocation="http://wgcard.xml.hslu.ch/wgs schemas/wgs.xsd">
   <wg id="1">
     <wg-members>
       <wg-member>

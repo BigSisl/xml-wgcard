@@ -8,13 +8,13 @@
                 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-                <link href="css/fonts.css" rel="stylesheet" type="text/css" />
-                <link href="css/main.css" rel="stylesheet" type="text/css" />
+                <link href="/css/fonts.css" rel="stylesheet" type="text/css" />
+                <link href="/css/main.css" rel="stylesheet" type="text/css" />
 
-                <script src="js/jquery-3.3.1.min.js" type="application/javascript" lang="javascript"></script>
-                <script src="js/ajv-6.10.0.min.js" type="application/javascript" lang="javascript"></script>
-                <script src="js/ajv-i18n-3.4.0.min.js" type="application/javascript" lang="javascript"></script>
-                <script src="js/validation.js" type="application/javascript" lang="javascript"></script>
+                <script src="/js/jquery-3.3.1.min.js" type="application/javascript" lang="javascript"></script>
+                <script src="/js/ajv-6.10.0.min.js" type="application/javascript" lang="javascript"></script>
+                <script src="/js/ajv-i18n-3.4.0.min.js" type="application/javascript" lang="javascript"></script>
+                <script src="/js/validation.js" type="application/javascript" lang="javascript"></script>
 
                 <xsl:apply-templates select="/p:page/p:head-add" />
 
@@ -22,8 +22,8 @@
             </head>
             <body>
                 <div id="header" class="container">
-                    <a href="index.xml" class="logo">
-                        <img src="img/logo.png" alt="WG Card Logo" />
+                    <a href="/index.xml" class="logo">
+                        <img src="/img/logo.png" alt="WG Card Logo" />
                     </a>
                     <p class="headline">Vergünstigungen für deine WG!</p>
                     <div class="clear" />

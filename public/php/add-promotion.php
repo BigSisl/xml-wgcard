@@ -12,7 +12,7 @@
     $token = insertIntoTokenXML($tokens_xml, $promotion->attributes()->id);
 
     $xml_new_valid = validateXML($xml, '../schemas/promotions.xsd');
-    $tokens_xml_new_valid = validateXML($xml, '../schemas/promotions.xsd');
+    $tokens_xml_new_valid = validateXML($xml, '../schemas/promoTokens.xsd');
 
     #store xml into original xml if validation is ok
     if($xml_new_valid && $tokens_xml_new_valid){

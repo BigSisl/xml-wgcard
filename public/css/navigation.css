@@ -19,7 +19,8 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #aaccffff;
+  background-color: #9ee493;
+  transition: 0.8s;
 }
 
 .active {

@@ -31,11 +31,6 @@
                     <div class="clear" />
                 </div>
                 <div id="content" class="container">
-					<ul>
-						<li><a class="active" href="index.xml">Home</a></li>
-						<li><a href="get-wgcard.xml">Neue WG</a></li>
-						<li><a href="add-promotion.xml">Neue Vergünstigung</a></li>
-					</ul>
                     <xsl:apply-templates />
                 </div>
                 <div id="footer" class="container">

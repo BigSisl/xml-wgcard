@@ -1,8 +1,8 @@
 .promotion-container {
-  /* Add shadows to create the "card" effect */
-  margin-top:10px;
-  display:flex;
-  flex-wrap:wrap;
+    /* Add shadows to create the "card" effect */
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
 }
 
 .promotion-item {
@@ -17,7 +17,7 @@
 
 /* On mouse-over, add a deeper shadow */
 .promotion-item:hover {
-  box-shadow: 2px 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 2px 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .promo-date {

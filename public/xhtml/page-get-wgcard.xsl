@@ -3,6 +3,11 @@
     <xsl:import href="page.xsl" />
 
     <xsl:template match="/p:page/p:content">
+        <ul>
+            <li><a href="index.xml">Home</a></li>
+            <li><a class="active" href="get-wgcard.xml">Neue WG</a></li>
+            <li><a href="add-promotion.xml">Neue Vergünstigung</a></li>
+        </ul>
         <form action="../php/wgcard-apply.php" method="POST" onsubmit="return validateForm();">
             <h4>Neue WG erfassen</h4>
             <p>Bitte gebt alle benötigten Informationen ein und schliesst dann den Vorgang mit dem Button 'WG Card bestellen!' ab. Wir freuen uns, dass sie sich bei uns registrieren.</p>

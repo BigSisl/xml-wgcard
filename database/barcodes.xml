@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<barcodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/barcodes" xsi:schemaLocation="http://wgcard.xml.hslu.ch/promotions public/schemas/barcodes.xsd">
+  <barcode wg-id="1">be2b5e57f6a8f1e4</barcode>
+  <barcode wg-id="2">eea70709bd2c77e2</barcode>
+  <barcode wg-id="3">461fa4951362a665</barcode>
+  <barcode wg-id="4">90dda13323bf52ee</barcode>
+  <barcode wg-id="5">af45ce1023fd345d</barcode>
+  <barcode wg-id="8">28a743f3d4cd99ba</barcode>
+</barcodes>

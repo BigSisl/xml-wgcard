@@ -1,9 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="xhtml/page-wgs.xsl"?>
-<wgs
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://wgcard.xml.hslu.ch/wgs"
-    xsi:schemaLocation="http://wgcard.xml.hslu.ch/wgs schemas/wgs.xsd">
+<wgs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/wgs" xsi:schemaLocation="http://wgcard.xml.hslu.ch/wgs schemas/wgs.xsd">
   <wg id="1">
     <wg-members>
       <wg-member>
@@ -141,6 +138,43 @@
     <address>
       <street>Deheime</street>
       <zip>8000</zip>
+      <city>Z&#xFC;rich</city>
+    </address>
+  </wg>
+  <wg id="8">
+    <wg-members>
+      <wg-member>
+        <person>
+          <firstName>Roland</firstName>
+          <lastName>Barcoderino</lastName>
+          <email>roland.barcodes@gmx.ch</email>
+          <tel>079 822 84 23</tel>
+        </person>
+        <contactPerson>false</contactPerson>
+      </wg-member>
+      <wg-member>
+        <person>
+          <firstName/>
+          <lastName/>
+          <email/>
+          <tel/>
+        </person>
+        <contactPerson>false</contactPerson>
+      </wg-member>
+      <wg-member>
+        <person>
+          <firstName/>
+          <lastName/>
+          <email/>
+          <tel/>
+        </person>
+        <contactPerson>false</contactPerson>
+      </wg-member>
+    </wg-members>
+    <alias>BarcoderZ</alias>
+    <address>
+      <street>Gamperstrasse 1</street>
+      <zip>8004</zip>
       <city>Z&#xFC;rich</city>
     </address>
   </wg>

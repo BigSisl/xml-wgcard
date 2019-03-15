@@ -1,12 +1,9 @@
 <?xml version="1.0" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns="http://wgcard.xml.hslu.ch/promotions"
-    targetNamespace="http://wgcard.xml.hslu.ch/promotions"
+    targetNamespace="http://wgcard.xml.hslu.ch/promoTokens"
     elementFormDefault="qualified">
-    <!-- used for validating promotion XML input of businesses and partially our database
-    Note: we may need to extend this to include the businesses name in the
-    case of adding a promotion
-    -->
+    <!-- validates the secret promoTokens.xml for storing the promotion codes -->
     <xs:element name="promoTokens">
         <xs:complexType>
             <xs:sequence minOccurs="0" maxOccurs="unbounded">

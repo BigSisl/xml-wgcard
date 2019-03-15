@@ -25,7 +25,7 @@ if(isset($token) && !empty($token)) {
 
     if(!isset($mngXml->xml->content->error)) {
 
-        $promotion = updatePromotion($mngXml->xml, $promotion, $token);
+        $promotion = updatePromotion($mngXml->xml, $promotion, $wg, $token);
 
         $mngXml->xml->content->addChild('token', $token);
         $mngXml->xml->content->addChild('barcode', $barcode);
@@ -37,7 +37,7 @@ if(isset($token) && !empty($token)) {
 
 $mngXml->print();
 
-function updatePromotion($outxml, $promotion, $token) {
+function updatePromotion($outxml, $promotion, $wg, $token) {
     $promo_file = __DIR__ . '/../promotions.xml';
 
     $xml = simplexml_load_file($promo_file);
@@ -65,7 +65,7 @@ function updatePromotion($outxml, $promotion, $token) {
 function insertIntoLogs($xml, $wg, $promotion, $content) {
     $logs_file = __DIR__ . '/../../database/logs.xml';
     $xml = simplexml_load_file($logs_file);
-    $log = $xml->addChild('log', $content);
+    $log = $xml->addChild('log');
     $log->addChild('message', $content);
     sxml_append($log, $promotion);
     $log->addAttribute('wg', $wg['id']);

@@ -50,6 +50,16 @@ function sxml_append(SimpleXMLElement $to, SimpleXMLElement $from) {
     $toDom->appendChild($toDom->ownerDocument->importNode($fromDom, true));
 }
 
+function removeToken($token) {
+    $promo_token_file = __DIR__ . '/../database/promoTokens.xml';
+    $xml = simplexml_load_file($promo_token_file);
+    $xml->registerXPathNamespace('p', 'http://wgcard.xml.hslu.ch/promoTokens');
+    $res = xpathOnlyOne($xml, 'p:token[text()="' . $token . '"]', '');
+    $dom = dom_import_simplexml($xml);
+    $dom->removeChild(dom_import_simplexml($res));
+    persistXML($promo_token_file, $xml);
+}
+
 /**
  * return null if not found
  */

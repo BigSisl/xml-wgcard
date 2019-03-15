@@ -119,7 +119,7 @@ form .field button:active, form .field input[type=submit]:active {
         float: none;
     }
 
-    form .field button, form .field input[type=submit] {
+    form .field input[type=button], form .field input[type=submit] {
         margin-left: 0;
     }
 }

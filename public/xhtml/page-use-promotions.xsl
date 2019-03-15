@@ -21,7 +21,7 @@
         <hr/>
     </xsl:template>
 
-    <xsl:template match="p:message">
+    <xsl:template match="p:message|p:error">
         <div>
             <xsl:value-of select="text()"></xsl:value-of>
         </div>
@@ -64,11 +64,13 @@
 
         <xsl:if test="p:token">
             <h2>Promotion with Token: </h2>
-            <pre><xsl:value-of select="p:token" /></pre>
+            <pre><xsl:value-of select="@token" /></pre>
+            <br />
             <xsl:apply-templates select="pr:promotion" />
 
             <h2>WG with Barcode:</h2>
             <pre><xsl:value-of select="p:barcode" /></pre>
+            <br />
             <xsl:apply-templates select="wg:wg" />
         </xsl:if>
 

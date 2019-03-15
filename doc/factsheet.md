@@ -42,14 +42,7 @@ mit einem Barcode welche wg diese Promotion nutzt. Anschliessend werden die
 Daten der WG zurückgegeben, somit erhalten die Geschäfter die Möglichkeit diese
 weiter zu verwerten.
 
-Es wurden keine Sicherheitsmassnahmen gegen Bruteforceattecken implementiert
-und die Tokens können durch die promotion xml dokumente durch ein business key
-geschützt zugegriffen werden.
-
-### Business key
-
-Derzeit wird ein statischer Key für das Promotioneneinlösen verwendet.
-Der Key lautet _business1_;
+Es wurden keine Sicherheitsmassnahmen gegen Bruteforceattecken implementiert.
 
 ## Verwendete Frameworks
 
@@ -68,5 +61,5 @@ zusammenzuführen.
 
 Wir verwenden PHP auf der serverseite um IDs, Tokens und Barcode Werte (nicht
 die eigentlichen Barcodes) zu generieren. Ausserdem wird PHP auch verwendet um
-XML Dateien zu ergänzen auszulesen und die Barcodes/Promo-Tokens zu validieren 
+XML Dateien zu ergänzen auszulesen und die Barcodes/Promo-Tokens zu validieren
 

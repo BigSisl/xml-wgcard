@@ -1,0 +1,21 @@
+\usepackage{multicol}
+\newcommand{\hideFromPandoc}[1]{#1}
+\hideFromPandoc{
+\let\Begin\begin
+\let\End\end
+}
+\usepackage{xcolor}
+
+\lstset{
+    basicstyle=\ttfamily,
+    numbersep=5pt,
+    backgroundcolor=\color{black!10},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    captionpos=b,
+    breaklines=true,
+    breakautoindent=true,
+    linewidth=\columnwidth
+}

@@ -86,7 +86,7 @@ form .field input, form .field button {
     margin: 0;
 }
 
-form .field button, form .field input[type=submit] {
+form .field input[type=button], form .field input[type=submit] {
     display: block;
     margin-left: 10em;
     background-color: #aaccffff;
@@ -97,7 +97,7 @@ form .field button, form .field input[type=submit] {
 }
 
 
-form .field button:hover, form .field input[type=submit]:hover {
+form .field input[type=button]:hover, form .field input[type=submit]:hover {
     background-color: #9ee493;
 }
 

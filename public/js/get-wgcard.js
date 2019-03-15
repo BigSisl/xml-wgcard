@@ -1,7 +1,7 @@
-var template = $("#wg-members .field.wg-member");
-var wgMemberNumber = +template.find(".wg-member-number").text();
-
 function addWGMember() {
+    var template = $("#wg-members .field.wg-member").first();
+    var wgMemberNumber = $('input[name="membercount"]').val();
+            
     wgMemberNumber++;
     $('input[name="membercount"]').val(wgMemberNumber);
     var newWgMemberField = template.clone();
@@ -24,12 +24,6 @@ function addWGMember() {
     newWgMemberField.find(".wg-member-number").text(wgMemberNumber);
     $("#wg-members").append(newWgMemberField);
 }
-
-$("button[name=addmember]").click(function(ev) {
-    ev.preventDefault();
-    addWGMember();
-    return false;
-});
 
 function validateForm(){
     var members = $('input[name="membercount"]').val();

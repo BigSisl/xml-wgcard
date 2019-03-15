@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<logs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://wgcard.xml.hslu.ch/logs"
+    xsi:schemaLocation="http://wgcard.xml.hslu.ch/logs public/schemas/logs.xsd">
+    <log date="2019-03-14">
+        Test log
+    </log>
+</logs>

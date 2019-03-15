@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://wgcard.xml.hslu.ch/logs"
+    targetNamespace="http://wgcard.xml.hslu.ch/logs"
+    elementFormDefault="qualified">
+    <!-- validates the secret promoTokens.xml for storing the promotion codes -->
+    <xs:element name="logs">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="log">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="date|info"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

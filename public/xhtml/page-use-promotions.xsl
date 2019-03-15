@@ -1,6 +1,25 @@
 <?xml version="1.0" ?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:p="http://wgcard.xml.hslu.ch/page" xmlns:wg="http://wgcard.xml.hslu.ch/wgs" xmlns="http://www.w3.org/1999/xhtml">
+<xsl:stylesheet version="1.0"
+        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+        xmlns:p="http://wgcard.xml.hslu.ch/page"
+        xmlns:pr="http://wgcard.xml.hslu.ch/promotions"
+        xmlns:wg="http://wgcard.xml.hslu.ch/wgs"
+        xmlns:barcode="http://wgcard.xml.hslu.ch/barcodes"
+        xmlns:token="http://wgcard.xml.hslu.ch/promoTokens"
+        xmlns="http://www.w3.org/1999/xhtml">
     <xsl:import href="page.xsl" />
+
+    <xsl:import href="page-wgs.xsl" />
+
+    <xsl:template match="pr:promotion">
+        <h2><xsl:value-of select="pr:name"/></h2>
+        <b>Aufgeschaltet: </b><xsl:value-of select="@added"/><br/>
+        <b>Anbieter: </b><xsl:value-of select="pr:provider"/><br/>
+        <b>Kurzbeschreibung: </b><xsl:value-of select="pr:description"/><br/>
+        <b>Rabatt: </b><xsl:value-of select="pr:discount"/><br/>
+        <b>Noch Verfügbar: </b><xsl:value-of select="pr:amount"/>
+        <hr/>
+    </xsl:template>
 
     <xsl:template match="p:message">
         <div>
@@ -29,12 +48,12 @@
             <form method="GET" action="/php/use-promotion.php">
                 <div class="field">
                     <label>Promotions-Token</label>
-                    <input type="text" name="token" />
+                    <input type="text" name="token" value="{@token}" />
                 </div>
 
                 <div class="field">
                     <label>WG Card-Code</label>
-                    <input type="text" name="token" />
+                    <input type="text" name="barcode" value="{@barcode}" />
                 </div>
 
                 <div class="field">
@@ -42,11 +61,16 @@
                 </div>
             </form>
         </xsl:if>
-        <xsl:apply-templates select="p:token" ></xsl:apply-templates>
-    </xsl:template>
 
-    <xsl:template match="p:token">
-        print out promotion information here:
-        <xsl:value-of select="token"></xsl:value-of>
+        <xsl:if test="p:token">
+            <h2>Promotion with Token: </h2>
+            <pre><xsl:value-of select="p:token" /></pre>
+            <xsl:apply-templates select="pr:promotion" />
+
+            <h2>WG with Barcode:</h2>
+            <pre><xsl:value-of select="p:barcode" /></pre>
+            <xsl:apply-templates select="wg:wg" />
+        </xsl:if>
+
     </xsl:template>
 </xsl:stylesheet>

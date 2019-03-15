@@ -65,7 +65,7 @@ function updatePromotion($outxml, $promotion, $token) {
 function insertIntoLogs($xml, $wg, $promotion, $content) {
     $logs_file = __DIR__ . '/../../database/logs.xml';
     $xml = simplexml_load_file($logs_file);
-    $log = $xml->addChild('log', $content);
+    $log = $xml->addChild('log');
     $log->addChild('message', $content);
     sxml_append($log, $promotion);
     $log->addAttribute('wg', $wg['id']);

@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:p="http://wgcard.xml.hslu.ch/page" xmlns:wg="http://wgcard.xml.hslu.ch/wgs" xmlns="http://www.w3.org/1999/xhtml">
     <xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
 
-    <xsl:template match="/">
+    <xsl:template match="/p:page">
         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
             <head>
                 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -34,7 +34,6 @@
 						<li><a class="active" href="index.xml">Home</a></li>
 						<li><a href="get-wgcard.xml">Neue WG</a></li>
 						<li><a href="add-promotion.xml">Neue Vergünstigung</a></li>
-						<li><a href="promotions.xml">Alle Vergünstigungen</a></li>
 					</ul>
                     <xsl:apply-templates />
                 </div>

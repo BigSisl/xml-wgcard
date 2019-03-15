@@ -6,7 +6,7 @@
     xmlns:pr="http://wgcard.xml.hslu.ch/promotions">
     <xsl:import href="page.xsl" />
 
-    <xsl:template match="p:page">
+    <xsl:template match="/p:page/p:content">
         <xsl:apply-templates select="document('../promotions.xml')" />
     </xsl:template>
 

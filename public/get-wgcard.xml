@@ -4,4 +4,5 @@
     <p:head-add xmlns="http://www.w3.org/1999/xhtml">
         <script src="js/get-wgcard.js" type="application/javascript" lang="javascript"></script>
     </p:head-add>
+    <content />
 </page>

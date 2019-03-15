@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:p="http://wgcard.xml.hslu.ch/page" xmlns="http://www.w3.org/1999/xhtml">
     <xsl:import href="page.xsl" />
 
-    <xsl:template match="/p:page">
+    <xsl:template match="/p:page/p:content">
         <form action="../php/wgcard-apply.php" method="POST" onsubmit="return validateForm();">
             <h4>Neue WG erfassen</h4>
             <p>Bitte gebt alle benötigten Informationen ein und schliesst dann den Vorgang mit dem Button 'WG Card bestellen!' ab. Wir freuen uns, dass sie sich bei uns registrieren.</p>

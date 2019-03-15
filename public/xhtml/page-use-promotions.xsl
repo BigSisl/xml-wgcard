@@ -8,7 +8,7 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="/p:page">
+    <xsl:template match="/p:page/p:content">
         <div>
             <h2>Business Interface für Promotionen</h2>
         </div>

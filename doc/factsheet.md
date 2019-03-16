@@ -1,5 +1,51 @@
-# Factsheet WGCard Projekt
+---
+documentclass: extarticle
+author:
+  - Lucien Zürcher
+  - Fabian Brunn
+  - Moritz Küttel
+title: "Factsheet XML Projekt: WGCard"
+subtitle: "Eine Plattform für Vergünstigungen für Wohngemeinschaften"
+geometry: "margin=1in"
+fontsize: 10pt
+numbersections: false
+linkcolor: #0000ff;
 
+---
+
+# Einleitung
+
+Als Teil der XML Blockwoche im Frühjahr 2019 an der Hochschule Luzern haben wir eine Platform für Vergünstigungen für Wohngemeinschaften unter Verwendung von XML und JSON Technologien entwickelt. Die Plattform ist erreichbar unter der folgenden URL:
+
+[http://wgcard.zuercher.io](http://wgcard.zuercher.io)
+
+Der Quellcode inklusive Versionshistorie ist auf GitHub zu finden:
+
+[https://github.com/bigSisl/XML-WGCard](https://github.com/bigSisl/XML-WGCard)
+
+# Konzept
+
+Die Idee der Plattform ist, dass Firmen mit Vergünstigungen werben
+können, um hauptsächlich Junge Leute in in einer Wohngemeinschaft
+wohnen zu erreichen. Wir bieten diesen die Möglichkeit Promotionen zu auf
+unsere Plattform auszuschalten, welche dann für die Wohngemeinschaften
+ersichtlich sind. Für dies Verlangen wir eine Prämie, was jeweils mit
+den Firmen verhandelt werden kann. Zum Beispiel kann ein Hallenbad eine
+Vergünstigung von 10% für Hallenbad besuche als Promotion eingeben.
+
+Wohngemeinschaften können sich auf der Plattform anmelden und erhalten
+dann eine WGCard mit einem Barcode, die Sie entweder ausdrucken können,
+oder auf dem Smartphone speichern können. Besuchen nun Mitbewohner
+der Wohngemeinschaft eines der Geschäfte, um von der Vergünstigung zu
+profiteren, können diese sich mit der WGCard ausweisen. Die Geschäfter
+können anschliessend die WGCard scannen und die Promotion mittels WGCard
+einlösen, was diesen Zugriff auf die Daten der Wohngemeinschaft gibt,
+welche sie dann weiter verwerten können.
+
+Im Markt gibt es bereits ähnliche Systeme wie zum Beispiel die
+StuCard. Jedoch benötigt man dafür ein Bankkonto und man bekommt immer
+Briefe. Unsere Plattform modernisiert das Ganze indem man dies komplett
+aufs Internet verlagern kann.
 
 ## Inhalt des Fact Sheet (von Vorlesungsfolien / delete me afterwards please)
  * Finale Version der Konzept
@@ -13,14 +59,7 @@
  * Rechtfertigung für jeden (!) Einsatz von nicht XML Technologien
  * Fazit
 
-## Verwendete 3rd Partei Bibliotheken
-
-### Browser
-
-Im Browser habe wir neben dem klassischen JQuery
-als Unterstützung auch ajv.js verwendet. Diese
-Bibliothek hilft beim validieren von JSON Objekten
-mit JSON-Schemas.
+# Architektur
 
 ## Promotion aufschalten
 
@@ -46,9 +85,13 @@ Es wurden keine Sicherheitsmassnahmen gegen Bruteforceattecken implementiert.
 
 ## Verwendete Frameworks
 
-* Wir setzen zwei XSLT Skripts von RenderX ein um die Barcodes zu generieren.
-Diese sind im public/svg Verzeichis zu finden.
-* TODO: JSON-Validation
+Wir setzen zwei XSLT Skripts von RenderX ein um die SVGs für die Barcodes
+zu generieren. Diese sind im `public/svg` Verzeichis zu finden.
+
+Clientseitig haben wir neben dem klassischen JQuery als Unterstützung
+auch ajv.js verwendet. Diese Bibliothek hilft beim validieren von JSON
+Objekten mit JSON-Schemas.
+
 
 ## Technische Stolpersteine
 
@@ -63,3 +106,6 @@ Wir verwenden PHP auf der serverseite um IDs, Tokens und Barcode Werte (nicht
 die eigentlichen Barcodes) zu generieren. Ausserdem wird PHP auch verwendet um
 XML Dateien zu ergänzen auszulesen und die Barcodes/Promo-Tokens zu validieren
 
+# Fazit
+
+Wir konnten ein Minimum Viable Product implementieren.

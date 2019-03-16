@@ -105,7 +105,7 @@ form .field input[type=button]:hover, form .field input[type=submit]:hover {
 form .field button:active, form .field input[type=submit]:active {
     background-color: #9ee493;
     margin-top: 0.125em;
-    text-shadow: 0em 0em 0.25em #F2F5Fa;
+    text-shadow: 0em 0em 0.25em #373e48ff;
 }
 
 

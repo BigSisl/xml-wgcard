@@ -14,8 +14,9 @@ li a {
   color: white;
   background-color: #373e48ff;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1em 1em;
   text-decoration: none;
+  outline: 0;
 }
 
 li a:hover:not(.active) {
@@ -25,4 +26,5 @@ li a:hover:not(.active) {
 
 .active {
   background-color: #aaccffff;
+  color: #373e48ff;
 }

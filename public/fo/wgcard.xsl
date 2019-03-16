@@ -18,9 +18,24 @@
             </fo:layout-master-set>
             <fo:page-sequence master-reference="letter">
                 <fo:static-content flow-name="xsl-region-before">
-                    <fo:block text-align="left">
-                        <fo:external-graphic src="url('img/logo.png')" />
-                    </fo:block>
+                    <fo:table space-after.optimum="20pt" margin-top="0pt">
+                        <fo:table-column column-number="1"/>
+                        <fo:table-column column-number="2"/>
+                        <fo:table-body>
+                            <fo:table-row>
+                                <fo:table-cell>
+                                    <fo:block text-align="left">
+                                        <fo:external-graphic src="url('img/logo.png')" />
+                                    </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell>
+                                    <fo:block text-align="right" color="#373e48" font-style="italic">
+                                        Vergünstigungen für deine WG!
+                                    </fo:block>
+                                 </fo:table-cell>
+                            </fo:table-row>
+                        </fo:table-body>
+                    </fo:table>
                 </fo:static-content>
                 <fo:flow flow-name="xsl-region-body">
                     <xsl:apply-templates />
@@ -87,7 +102,7 @@
             <fo:table-column column-number="1"/>
             <fo:table-column column-number="2"/>
             <fo:table-body>
-                <fo:table-row keep-together.within-page="always">
+                <fo:table-row keep-together.within-page="always" background-color="#f2f5fa">
                     <fo:table-cell border="solid #373e48 1pt" padding="12pt" text-align="center">
                         <fo:block>
                             <fo:external-graphic src="url('img/logo.png')" />

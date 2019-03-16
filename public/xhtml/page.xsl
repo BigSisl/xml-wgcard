@@ -1,6 +1,9 @@
 <?xml version="1.0" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:p="http://wgcard.xml.hslu.ch/page" xmlns:wg="http://wgcard.xml.hslu.ch/wgs" xmlns="http://www.w3.org/1999/xhtml">
+    <xsl:import href="navigation.xsl" />
+
     <xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
+
 
     <xsl:template match="/p:page">
         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
@@ -31,6 +34,10 @@
                     <div class="clear" />
                 </div>
                 <div id="content" class="container">
+                    <xsl:call-template name="navigation">
+                        <xsl:with-param name="active-link" select="@link" />
+                    </xsl:call-template>
+
                     <xsl:apply-templates />
                 </div>
                 <div id="footer" class="container">

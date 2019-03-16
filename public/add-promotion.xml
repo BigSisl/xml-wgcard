@@ -1,5 +1,11 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="xhtml/page-add-promotion.xsl"?>
-<page xmlns="http://wgcard.xml.hslu.ch/page" xmlns:p="http://wgcard.xml.hslu.ch/page" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://wgcard.xml.hslu.ch/page schemas/page.xsd" title="WG Card - Neue Promotion!">
+<page xmlns="http://wgcard.xml.hslu.ch/page"
+    xmlns:p="http://wgcard.xml.hslu.ch/page"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://wgcard.xml.hslu.ch/page schemas/page.xsd"
+    title="WG Card - Neue Promotion!"
+    link="add-promotion.xml">
+
     <content />
 </page>

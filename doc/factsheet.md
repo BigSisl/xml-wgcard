@@ -29,8 +29,7 @@ Die Idee der Plattform ist, dass Firmen mit Vergünstigungen werben
 können, um hauptsächlich Junge Leute in in einer Wohngemeinschaft
 wohnen zu erreichen. Wir bieten diesen die Möglichkeit Promotionen zu auf
 unsere Plattform auszuschalten, welche dann für die Wohngemeinschaften
-ersichtlich sind. Für dies Verlangen wir eine Prämie, was jeweils mit
-den Firmen verhandelt werden kann. Zum Beispiel kann ein Hallenbad eine
+ersichtlich sind. Zum Beispiel kann ein Hallenbad eine
 Vergünstigung von 10% für Hallenbad besuche als Promotion eingeben.
 
 Wohngemeinschaften können sich auf der Plattform anmelden und erhalten
@@ -40,12 +39,13 @@ der Wohngemeinschaft eines der Geschäfte, um von der Vergünstigung zu
 profiteren, können diese sich mit der WGCard ausweisen. Die Geschäfter
 können anschliessend die WGCard scannen und die Promotion mittels WGCard
 einlösen, was diesen Zugriff auf die Daten der Wohngemeinschaft gibt,
-welche sie dann weiter verwerten können.
+welche sie dann weiter verwerten können. Die Vermittlungsgebühr stellen
+wir dann den Firmen in Rechnung.
 
 Im Markt gibt es bereits ähnliche Systeme wie zum Beispiel die
 StuCard. Jedoch benötigt man dafür ein Bankkonto und man bekommt immer
-Briefe. Unsere Plattform modernisiert das Ganze indem man dies komplett
-aufs Internet verlagern kann.
+Briefe. Unsere Plattform modernisiert das Konzept und das Ganze kann
+online geschehen.
 
 ## Inhalt des Fact Sheet (von Vorlesungsfolien / delete me afterwards please)
  * Finale Version der Konzept
@@ -61,6 +61,12 @@ aufs Internet verlagern kann.
 
 # Architektur
 
+## WGCard bestellen
+
+Wohngemeinschaften können sich hier eintragen um für jedes Mitglied eine WGCard zu erhalten.
+Dafür müssen Sie ihre Daten inklusive Wohnadresse angeben. Anschliessend erhalten diese ein mit FO generiertes PDF mit einer WG Card für jedes Mitglied.
+
+
 ## Promotion aufschalten
 
 Das Aufschalten von Promotionen ist öffentlich und
@@ -68,7 +74,7 @@ kann unter /add-promotion.xml gemacht werden. Die
 Felder werden Clientseitig durch ein JSON-Schema und
 Serverseitig durch ein XML-Schema validiert.
 
-Wenn eine Promotion erstellt wird, erhält man einmailig
+Wenn eine Promotion erstellt wird, erhält man einmalig
 randomisiertes Token welches Serverseitig gespeichert wird.
 Dieses Token ermöglicht dem Ersteller das abziehen von genutzten Vergünstigungen.
 

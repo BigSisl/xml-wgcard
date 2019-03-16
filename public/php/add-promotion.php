@@ -50,6 +50,12 @@ EOT;
 
     function insertIntoXML($xml) {
         $promotion = $xml->addChild('promotion', '');
+        $provider = $promotion->addChild('provider', '');
+        $provider->addChild('name', $_POST['provider']);
+        $address = $provider->addChild('address', '');
+        $address->addChild('street', $_POST['street']);
+        $address->addChild('zip', $_POST['zip']);
+        $address->addChild('city', $_POST['city']);
 
         $promotion->addAttribute('id', generateNewId($xml));
         $promotion->addAttribute('added', date('Y-m-d'));

@@ -17,10 +17,16 @@
             <h2><xsl:value-of select="pr:name"/></h2>
             <span class="promo-date"><xsl:value-of select="@added"/></span>
             <hr></hr>
-            <b>Anbieter: </b><xsl:value-of select="pr:provider"/><br/>
+            <xsl:call-template name="address"/>
+            <b>Anbieter: </b><xsl:value-of select="pr:provider/pr:name"/><br/>
             <b>Kurzbeschreibung: </b><xsl:value-of select="pr:description"/><br/>
             <b>Rabatt: </b><xsl:value-of select="pr:discount"/><br/>
             <b>Noch Verfügbar: </b><xsl:value-of select="pr:amount"/>
         </div>
     </xsl:template>
+    
+    <xsl:template name="address">
+        
+    </xsl:template>
+
 </xsl:stylesheet>

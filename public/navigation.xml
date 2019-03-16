@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <navigation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/navigation" xsi:schemaLocation="http://wgcard.xml.hslu.ch/navigation public/schemas/navigation.xsd">
-    <item link="index.xml">Promos</item>
-    <item link="get-wgcard.xml">WGCard bestellen</item>
-    <item link="add-promotion.xml">Neue Promo</item>
-    <item link="use-promotion.xml">Promo einlösen</item>
+    <item link="/index.xml">Promos</item>
+    <item link="/get-wgcard.xml">WGCard bestellen</item>
+    <item link="/add-promotion.xml">Neue Promo</item>
+    <item link="/use-promotion.xml">Promo einlösen</item>
 </navigation>

@@ -18,16 +18,32 @@
             "type": "string",
             "minLength": 1
         },
+        "street": { "type": "string" },
+        "zip": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$"
+        },
+        "city": { "type": "string" },
         "amount": {
             "type": "string",
-            "pattern": "^[1-9][0-9]*$"
+            "pattern": "^[1-9][0-9]{0,2}$"
         }
     },
     "required": [
+        "provider",
+        "street",
+        "zip",
+        "city",
         "name",
         "description",
         "discount",
-        "provider",
         "amount"
-    ]
+    ],
+    "errorMessage": {
+        "required": "Alle Felder müssen ausgefüllt sein",
+        "properties": {
+            "zip": "Der PLZ muss aus 4 Zahlen bestehen",
+            "amount": "Anzahl muss eine positive Zahl sein mit maximum 999"
+        }
+    }
 }

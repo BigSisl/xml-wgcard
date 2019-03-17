@@ -11,7 +11,7 @@
     $barcodes_xml_new_valid = validateXML($barcodes_xml, '../schemas/barcodes.xsd');
 
     #store xml into original xml if validation is ok
-    if($xml_new_valid && $barcodes_xml_new_valid){
+    if($xml_new_valid && $barcodes_xml_new_valid && false){
         persistXML('../wgs.xml', $xml);
         persistXML('../../database/barcodes.xml', $barcodes_xml);
 

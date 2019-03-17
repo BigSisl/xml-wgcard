@@ -1,6 +1,6 @@
 class Validation {
     static validate(schema, data) {
-        console.log(schema);
+        console.debug(schema);
         let validate = Validation.ajv.compile(schema);
         let valid = validate(data);
 
@@ -12,8 +12,8 @@ class Validation {
                 }
                 return error;
             })
-            let errors = AjvLocalize.de(validate.errors);
-
+//            let errors = AjvLocalize.de(validate.errors);
+            console.debug(validate.errors);
             Validation.setError(Validation.getErrorText(validate.errors));
         }
 
@@ -47,8 +47,6 @@ class Validation {
     static submit(form, schemaUrl) {
         var form = $(form);
 
-        console.log(form);
-
         var url = form.attr('action');
 
         if(Validation.validateForm(form, schemaUrl)) {
@@ -64,12 +62,14 @@ class Validation {
     static getErrorText(errors) {
         // randomly seems to add data to the beginning of the line, so i remove it
         return Validation.ajv.errorsText(errors, { separator: '\n' })
-            .replace(/^data\.?/gm, '')
+            .replace(/^data(\/[a-z0-9]+)* /gm, '');
     }
 
     static validateForm(self, url) {
         const data = Validation.getFormData(self);
         const schema = Validation.getSchemaSynchrone(url);
+
+        console.debug(data);
 
         return Validation.validate(schema, data);
     }
@@ -78,7 +78,9 @@ class Validation {
         var data = {};
         self.serializeArray()
             .forEach(element => {
-                data[element.name] = element.value;
+                if(element.value != "") {
+                    data[element.name] = element.value;
+                }
             });
         return data;
     }
@@ -100,5 +102,7 @@ class Validation {
         Validation.descriptiveTitles["." + input] = text;
     }
 }
-Validation.ajv = new Ajv({ allErrors: true });
+Validation.ajv = new Ajv({ allErrors: true, jsonPointers: true });
+AjvErrors(Validation.ajv /*, {singleError: true} */);
+
 Validation.descriptiveTitles = {};

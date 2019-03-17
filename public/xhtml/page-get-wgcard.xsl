@@ -3,7 +3,7 @@
     <xsl:import href="page.xsl" />
 
     <xsl:template match="/p:page/p:content">
-        <form action="../php/wgcard-apply.php" method="POST" onsubmit="return validateForm();">
+        <form action="../php/wgcard-apply.php" method="POST">
             <h4>Neue WG erfassen</h4>
             <p>Bitte gebt alle benötigten Informationen ein und schliesst dann den Vorgang mit dem Button 'WG Card bestellen!' ab. Wir freuen uns, dass sie sich bei uns registrieren.</p>
             <h5>WG Mitglieder (min. 2)</h5>
@@ -69,5 +69,15 @@
                 <input name="submit" type="submit" value="WG Card bestellen!" />
             </div>
         </form>
+        <script>
+            //<![CDATA[
+                Validation.addDescriptiveType("provider", "Kunde");
+
+                $('form').submit(function(e) {
+                    e.preventDefault();
+                    Validation.submit(this, '/schemas/wg-card-application.schema.json');
+                });
+            //]]>
+        </script>
     </xsl:template>
 </xsl:stylesheet>

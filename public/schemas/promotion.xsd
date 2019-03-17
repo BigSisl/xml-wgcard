@@ -20,14 +20,16 @@
             <xs:attribute name="id" type="xs:integer" use="required"/>
         </xs:complexType>
     </xs:element>
-    
+
     <xs:element name="provider">
-        <xs:sequence minOccurs="1" maxOccurs="1">
-            <xs:element name="name" type="xs:string"/>
-            <xs:element ref="address"/>
-        </xs:sequence>
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+                <xs:element name="name" type="xs:string"/>
+                <xs:element ref="address"/>
+            </xs:sequence>
+        </xs:complexType>
     </xs:element>
-    
+
     <xs:element name="address">
         <xs:complexType>
             <xs:sequence minOccurs="1" maxOccurs="1">

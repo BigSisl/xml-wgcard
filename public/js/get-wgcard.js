@@ -1,7 +1,7 @@
 function addWGMember() {
     var template = $("#wg-members .field.wg-member").first();
     var wgMemberNumber = $('input[name="membercount"]').val();
-            
+
     wgMemberNumber++;
     $('input[name="membercount"]').val(wgMemberNumber);
     var newWgMemberField = template.clone();

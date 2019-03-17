@@ -40,7 +40,7 @@ profitieren, können diese sich mit der WGCard ausweisen. Die Geschäfte
 können anschliessend die WGCard scannen und die Promotion mittels WGCard
 einlösen. Im Gegenzug erhalten Sie Zugriff auf die Daten der
 Wohngemeinschaft, die Sie dann weiter verwerten dürfen.
-Die Vermittlungsgebühr wird dann von der Platform in Rechnung gestellt.
+Die Vermittlungsgebühr wird von der Platform in Rechnung gestellt.
 Jede natürliche oder juristische Person kann eine Promotion aufschalten,
 verpflichtet sich jedoch dadurch, eine bestimmte Vermittlungsgebühr beim
 Promotionen einlösen zu übernehmen.
@@ -62,7 +62,7 @@ um für jedes Mitglied eine WGCard zu erhalten. Dafür müssen Sie ihre Daten
 inklusive Wohnadresse angeben. Anschliessend erhalten Sie ein mit FO generiertes
 PDF mit einer WG Card für jedes Mitglied.
 
-## Promotion aufschalten
+## Promotion / Vergünstigung aufschalten
 
 Das Aufschalten von Promotionen ist öffentlich und
 kann unter _/add-promotion.xml_ gemacht werden. Die
@@ -71,17 +71,15 @@ serverseitig durch ein XML-Schema validiert.
 
 Wenn eine Promotion erstellt wird, erhält man ein einmalig generiertes,
 randomisiertes Token, welches serverseitig gespeichert wird.
-Dieses Token ermöglicht dem Ersteller das abziehen von genutzten Vergünstigungen.
 
 ## Promotioneinlösen
 
 Durch das Token kann auf die Promotion zugegriffen werden.
-Der Link _/promotion_access.xml ermöglicht die Eingabe des Tokens und dem
-Barcode der WG, welche die Promotion nutzt. Anschliessend werden die
+Der Link _/use-promotion.xml ermöglicht die Eingabe des Tokens und dem
+Barcode der WG, welche die Promotion nutzt. Beim Aufruf wird automatisch
+eine Nutzung der Promotion abgezogen. Anschliessend werden die
 Daten der WG zurückgegeben, somit erhalten die Geschäfte die Möglichkeit, diese
 weiter zu verwerten.
-
-Es wurden keine Sicherheitsmassnahmen gegen Bruteforceattecken implementiert.
 
 ## Verwendete Frameworks
 
@@ -97,8 +95,8 @@ Objekten mit JSON-Schemas.
 
 Da die .xml Dokumente komplett ausgeliefert werden müssen bei Verwendung von
 clientseitigem XSLT, können darin keine Geheimnisse wie die Tokens übermittelt
-werden. Deshalb muss PHP eingesetzt werden, um diese Daten zu trennen und wieder
-zusammenzuführen.
+werden. Deshalb musste PHP eingesetzt werden, um diese Daten zu trennen und in
+einem geschützten Bereich aufzubewahren.
 
 ## Einsatz von nicht XML/JSON-Technologien
 
@@ -108,11 +106,12 @@ XML Dateien zu ergänzen, auszulesen und die Barcodes/Promo-Tokens zu validieren
 
 # Fazit
 
-Wir konnten mittels XML Technologien ein Minimum Viable Product implementieren. XSLT besitzt viele Vorteile
-beim Prozessieren von Dokumenten und XSD ermöglicht eine zusätzliche Absicherung
-mithilfe von deskriptiven Mitteln. Beim Erstellen von PDF-Dokumenten erwies sich
-dies als sehr hilfreich, jedoch würden wir in Zukunft keine Webseite nur mit diesen
-Technologien erstellen. Das strikte Einhalten der Standards ist teils ungünstig
-und verlangsamt die Arbeit. Beispielsweise verwenden viele Frameworks Templateengines
-die XSD sauber ersetzen können und zudem einfacher sind. Ebenso wird teils die
-Validierung im Code der deskriptiven Validierung bevorzugt.
+Wir konnten mittels XML Technologien ein Minimum Viable Product implementieren.
+XSLT besitzt viele Vorteile beim Prozessieren von Dokumenten und XSD ermöglicht
+eine zusätzliche Absicherung mithilfe von deskriptiven Mitteln. Beim Erstellen
+von PDF-Dokumenten erwies sich dies als sehr hilfreich, jedoch würden wir in
+Zukunft keine Webseite nur mit diesen Technologien erstellen. Das strikte
+Einhalten der Standards ist teils ungünstig und verlangsamt die Arbeit.
+Beispielsweise verwenden viele Frameworks Templateengines die XSD sauber ersetzen
+können und zudem einfacher sind. Ebenso wird teils die Validierung im Code der
+deskriptiven Validierung bevorzugt.

@@ -14,7 +14,7 @@
     $wg = insertIntoXML($xml);
     $barcode = insertIntoBarcodesXML($barcodes_xml, $wg->attributes()->id);
 
-    $xml_new_valid = @validateXML($xml, '../schemas/wgs.xsd');
+    $xml_new_valid = validateXML($xml, '../schemas/wgs.xsd');
     $barcodes_xml_new_valid = @validateXML($barcodes_xml, '../schemas/barcodes.xsd');
 
     #store xml into original xml if validation is ok
@@ -23,7 +23,7 @@
         persistXML('../../database/barcodes.xml', $barcodes_xml);
 
         if(generateWGBarcodePDF($wg, (string)$barcode)) {
-            $pdfUrl = $host . '/pdfs/' . (string)$barcode . '.pdf';
+            $pdfUrl = 'http://' . $host . '/pdfs/' . (string)$barcode . '.pdf';
 
             $object->message = $object->message = <<<EOT
 WGCard erfolgreich erstellt.

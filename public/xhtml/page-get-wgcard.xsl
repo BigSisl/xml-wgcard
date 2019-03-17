@@ -5,7 +5,7 @@
     <xsl:template match="/p:page/p:content">
         <pre id="message" class="hide">
         </pre>
-        <div class="spinner hide">
+        <div class="spinner hide loader">
           <div class="bounce1"></div>
           <div class="bounce2"></div>
           <div class="bounce3"></div>

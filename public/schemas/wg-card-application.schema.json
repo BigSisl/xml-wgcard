@@ -1,69 +1,66 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "WG list",
-    "definitions": {
-    "wg": {
-      "type": "object",
-      "properties": {
-        "members": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/wg_member"
-          },
-          "uniqueItems": true
-        },
-        "alias": { "type": "string" },
-        "address": { "type": "string" },
-        "plz": { "type": "integer" }
-      },
-      "required": ["members", "alias", "address", "plz"]
-    },
-    "date": {
-      "type": "object",
-      "properties": {
-        "year": {
-          "type": "integer",
-          "minimum": 1900,
-          "maximum": 2100
-        },
-        "month": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 12
-        },
-        "day": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 31
-        }
-      },
-      "required": ["year", "month", "day"]
-    },
-    "wg_member": {
-      "type": "object",
-      "properties": {
-        "contact_person": { "type": "boolean" },
-        "member": { "$ref": "#/definitions/person" }
-      },
-      "required": ["contact_person", "member"]
-    },
-    "person": {
-      "type": "object",
-      "properties": {
-        "gender": {
+  "type": "object",
+  "properties": {
+      "alias": { "type": "string" },
+      "street": { "type": "string" },
+      "city": { "type": "string" },
+      "contactPerson": { "type": "string" },
+      "zip": {
           "type": "string",
-          "enum": ["male", "female"]
-        },
-        "birthday": { "$ref": "#/definitions/date" },
-        "first_name": { "type": "string" },
-        "last_name": { "type": "string" },
-        "email": { "type": "string" },
-        "tel": { "type": "string" }
+          "pattern": "^[0-9]{4}$"
       },
-      "required": ["birthday", "first_name", "last_name", "email", "tel"]
-    }
+      "membercount": {
+          "type": "string",
+          "pattern": "^[2-9][0-9]*$"
+      }
+  },
+  "patternProperties": {
+      "firstname.*": { "type": "string" },
+      "lastname.*": { "type": "string" },
+      "mail.*": {
+          "type": "string",
+          "pattern": "^(([^<>()[]\\.,;:s@\"]+(.[^<>()[]\\.,;:s@\"]+)*)|(\".+\")|.*)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$"
+      },
+      "tel.*": {
+        "$ref": "#/definitions/phone"
+      }
+  },
+  "required": [
+    "alias",
+    "street",
+    "city",
+    "zip",
+    "membercount",
+    "contactPerson",
+    "firstname1",
+    "lastname1",
+    "mail1",
+    "tel1"
+  ],
+  "errorMessage": {
+    "required": {
+      "alias": "Das Feld WG-Name muss gesetzt werden",
+      "street": "Das Feld Strasse muss gesetzt werden",
+      "city": "Das Feld Ort muss gesetzt werden",
+      "zip": "Das Feld PLZ muss gesetzt werden",
+      "contactPerson": "Es wurde keine Ansprechsperson gesetzt",
+      "firstname1": "Das Feld Vorname des Mitgliedes #1 muss gesetzt werden",
+      "lastname1": "Das Feld Nachname des Mitgliedes #1 muss gesetzt werden",
+      "mail1": "Das Feld Mail des Mitgliedes #1 muss gesetzt werden",
+      "tel1": "Das Feld Telefon des Mitgliedes #1 muss gesetzt werden"
     },
-  "type": "array",
-  "items": { "$ref": "#/definitions/wg" },
-  "uniqueItems": true
+    "properties": {
+        "zip": "Der PLZ muss aus 4 Zahlen bestehen",
+        "tel1": "Die Telefonnummer ${/tel1} des Mitgliedes #1 ist ungültig",
+        "mail1": "Die Emailaddresse ${/mail1} des Mitgliedes #1 ist ungültig",
+        "membercount": "Mindestens 2 Mitglieder werden für eine WG benötigt"
+    }
+  },
+  "definitions": {
+    "phone": {
+      "type": "string",
+      "pattern": "^(\\+41|0041|0){1}(\\(0\\))?( ?[0-9]){9}$"
+    }
+  }
 }

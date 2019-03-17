@@ -7,23 +7,23 @@
         </pre>
         <form action="../php/add-promotion.php" method="POST">
             <h4>Neue Vergünstigung hinzufügen</h4>
-            
+
             <h5>Kunde - Rechnungsadresse</h5>
             <div class="field">
                 <label>Kunde</label>
                 <input type="text" name="provider" />
             </div>
-            
+
             <div class="field">
                 <label>Strasse</label>
                 <input type="text" name="street" />
             </div>
-            
+
             <div class="field">
                 <label>PLZ</label>
                 <input type="text" name="zip" />
             </div>
-            
+
             <div class="field">
                 <label>Ort</label>
                 <input type="text" name="city" />
@@ -56,12 +56,6 @@
         </form>
         <script>
             //<![CDATA[
-                Validation.addDescriptiveType("provider", "Kunde");
-                Validation.addDescriptiveType("name", "Bezeichnung");
-                Validation.addDescriptiveType("discount", "Rabatt");
-                Validation.addDescriptiveType("amount", "Anzahl");
-                Validation.addDescriptiveType("description", "Beschreibung");
-
                 $('form').submit(function(e) {
                     e.preventDefault();
                     Validation.submit(this, '/schemas/add-promotion.schema.json');

@@ -15,6 +15,7 @@
                 <link href="/css/main.css" rel="stylesheet" type="text/css" />
                 <link href="/css/navigation.css" rel="stylesheet" type="text/css" />
                 <link href="/css/promotion-style.css" rel="stylesheet" type="text/css" />
+                <link href="/css/spinner.css" rel="stylesheet" type="text/css" />
 
                 <script src="/js/jquery-3.3.1.min.js" type="application/javascript" lang="javascript"></script>
                 <script src="/js/ajv-6.10.0.min.js" type="application/javascript" lang="javascript"></script>

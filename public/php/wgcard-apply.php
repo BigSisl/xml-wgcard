@@ -3,26 +3,44 @@
     //error_reporting(0);
     $xml = simplexml_load_file('../wgs.xml');
     $barcodes_xml = simplexml_load_file('../../database/barcodes.xml');
+    $host = apache_request_headers()['Host'];
+
+    $out = $object = (object) [
+        'message' => 'something failed',
+        'open_blank' => '',
+        'type' => 'error'
+    ];
 
     $wg = insertIntoXML($xml);
     $barcode = insertIntoBarcodesXML($barcodes_xml, $wg->attributes()->id);
 
-    $xml_new_valid = validateXML($xml, '../schemas/wgs.xsd');
-    $barcodes_xml_new_valid = validateXML($barcodes_xml, '../schemas/barcodes.xsd');
+    $xml_new_valid = @validateXML($xml, '../schemas/wgs.xsd');
+    $barcodes_xml_new_valid = @validateXML($barcodes_xml, '../schemas/barcodes.xsd');
 
     #store xml into original xml if validation is ok
-    if($xml_new_valid && $barcodes_xml_new_valid && false){
+    if($xml_new_valid && $barcodes_xml_new_valid){
         persistXML('../wgs.xml', $xml);
         persistXML('../../database/barcodes.xml', $barcodes_xml);
 
         if(generateWGBarcodePDF($wg, (string)$barcode)) {
-            header('Location: /pdfs/' . (string)$barcode . '.pdf');
-            exit;
-       }
-        echo "ERRORS on pdf generation:";
+            $pdfUrl = $host . '/pdfs/' . (string)$barcode . '.pdf';
+
+            $object->message = $object->message = <<<EOT
+WGCard erfolgreich erstellt.
+
+Die WGCard sollte sich automatisch öffnen.
+Folgend ist der Link zur WGCard:
+
+EOT;
+            $object->open_blank = $pdfUrl;
+            $object->message .= $pdfUrl;
+            $object->type = 'success';
+        } else {
+            $object->message = "Fehler beim generiern der WG Karte";
+        }
     }
     else{
-        echo "validation failed";
+        $object->message = "validation failed";
     }
 
     function insertIntoBarcodesXML($xml, $wg_id) {
@@ -64,7 +82,7 @@
         $person = $wg_member->addChild('person', '');
         insertPerson($person, $i);
 
-        if ($_POST['contactPerson'.$i] == 'on') {
+        if ($_POST['contactPerson'] == 'contactPerson'.$i) {
             $wg_member->addChild('contactPerson', 'true');
         }
         else{
@@ -127,5 +145,6 @@
 
     }
 
+    header('Content-Type: application/json');
 ?>
-<a href="../get-wgcard.xml">return</a>
+<?= json_encode($out); ?>

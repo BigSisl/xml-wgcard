@@ -5,14 +5,10 @@ class Validation {
         let valid = validate(data);
 
         if(!valid) {
-            // override dataPath to get descriptive titles
-            validate.errors.map(error => {
-                if(typeof Validation.descriptiveTitles[error.dataPath] !== "undefined") {
-                    error.dataPath = Validation.descriptiveTitles[error.dataPath];
-                }
-                return error;
-            })
-//            let errors = AjvLocalize.de(validate.errors);
+            if(validate.errors.length > 3) {
+                validate.errors = validate.errors.slice(0,4);
+                validate.errors[3].message = '...';
+            }
             console.debug(validate.errors);
             Validation.setError(Validation.getErrorText(validate.errors));
         }
@@ -33,6 +29,7 @@ class Validation {
     static parseServerAnswer(data) {
         try {
             let json = data;
+
             if(json.type == 'success') {
                 Validation.setSuccess(json.message);
             } else {
@@ -45,11 +42,17 @@ class Validation {
     }
 
     static submit(form, schemaUrl) {
+        Validation.submitWithSchema(form, Validation.getSchemaSynchrone(schemaUrl));
+    }
+
+    static submitWithSchema(form, schema) {
         var form = $(form);
 
         var url = form.attr('action');
 
-        if(Validation.validateForm(form, schemaUrl)) {
+        $(window).scrollTop(0);
+
+        if(Validation.validateForm(form, schema)) {
             $.ajax({
                 type: "POST",
                 url: url,
@@ -65,9 +68,8 @@ class Validation {
             .replace(/^data(\/[a-z0-9]+)* /gm, '');
     }
 
-    static validateForm(self, url) {
+    static validateForm(self, schema) {
         const data = Validation.getFormData(self);
-        const schema = Validation.getSchemaSynchrone(url);
 
         console.debug(data);
 

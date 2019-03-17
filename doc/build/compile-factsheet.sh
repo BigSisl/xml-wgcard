@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-# you need to have pandoc installed
+# you need to have pandoc and xelatex installed
 
 d="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd $d && cd ../../
 pandoc -V papersize:a4 \
     -V logo:'`../../public/img/logo.png`{=latex}' \
     -V date:"$(date +'%d.%m.%Y')" \

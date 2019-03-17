@@ -80,7 +80,6 @@ Dieses Token ermöglicht dem Ersteller das abziehen von genutzten Vergünstigung
 
 ## Promotioneinlösen
 
-TODO:
 Durch das Token kann auf die Promotion zugegriffen werden.
 Der Link _/promotion_access.xml ermöglicht die Eingabe des Tokens und dem
 Barcode der WG, welche die Promotion nutzt. Anschliessend werden die

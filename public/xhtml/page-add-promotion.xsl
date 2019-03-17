@@ -13,11 +13,11 @@
                     ** Beim Ausschreiben von Vergünstigung verpflichtet man sich
                     die vorgeschriebene Vermittlungsgebühr beim Einlösen
                     einer Vergünstigung zu übernehmen. Diese wird
-                    elektronisch durch eine Email ende Monat nach Einlösung
+                    elektronisch durch eine Email Ende Monat nach Einlösung
                     eingezogen.
                 </h5>
                 <h5>
-                    ** Konzept -> Tritt nicht auf Testplatform in kraft.
+                    ** Konzept -> Tritt nicht auf Testplatform in Kraft.
                 </h5>
             </div>
 

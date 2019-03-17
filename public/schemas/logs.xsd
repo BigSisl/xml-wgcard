@@ -3,20 +3,25 @@
     xmlns="http://wgcard.xml.hslu.ch/logs"
     targetNamespace="http://wgcard.xml.hslu.ch/logs"
     elementFormDefault="qualified">
-    <!-- validates the secret promoTokens.xml for storing the promotion codes -->
+    <!-- validates the logs.xml file -->
     <xs:element name="logs">
         <xs:complexType>
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="log">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:any processContents="skip" minOccurs="0"/>
-                        </xs:sequence>
-                        <xs:attribute type="xs:string" name="date" use="optional"/>
-                        <xs:attribute type="xs:string" name="info" use="optional"/>
-                    </xs:complexType>
-                </xs:element>
+                <xs:element ref="log"/>
             </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="log">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:any processContents="skip" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="date" use="required"/>
+            <xs:attribute type="xs:string" name="type" use="required"/>
+            <xs:attribute type="xs:string" name="wg" use="optional"/>
+            <xs:attribute type="xs:string" name="promotion" use="optional"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>

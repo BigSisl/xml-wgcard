@@ -64,6 +64,7 @@ function updatePromotion($outxml, $promotion, $wg, $token) {
 
 function insertIntoLogs($xml, $wg, $promotion, $content) {
     $logs_file = __DIR__ . '/../../database/logs.xml';
+
     $xml = simplexml_load_file($logs_file);
     $log = $xml->addChild('log');
     $log->addChild('message', $content);
@@ -75,5 +76,11 @@ function insertIntoLogs($xml, $wg, $promotion, $content) {
 
     // TODO validate
 
-    persistXML($logs_file, $xml);
+    $logs_xml_valid = validateXML($xml, __DIR__ . '/../schemas/logs.xsd');
+    if($logs_xml_valid) {
+        persistXML($logs_file, $xml);
+    } else {
+        die('Validation of logs.xml failed, this should not happen');
+        exit;
+    }
 }

@@ -27,7 +27,7 @@ Der Quellcode inklusive Versionshistorie ist auf GitHub zu finden:
 
 # Konzept
 
-Firmen sollen mit dieser Platform durch aufschalten von Promotionen
+Unternehmen sollen mit dieser Platform durch aufschalten von Promotionen
 gezielt junge Leute in Wohngemeinschaften erreichen können. Die Promotionen
 können nur mit einer validen Karte eingelöst werden. Zum Beispiel kann
 ein Hallenbad eine Vergünstigung von 10% auf Hallenbadbesuche anbieten.
@@ -35,12 +35,13 @@ ein Hallenbad eine Vergünstigung von 10% auf Hallenbadbesuche anbieten.
 Wohngemeinschaften können sich auf der Plattform anmelden und erhalten
 damit eine WGCard mit einem Barcode. Diese kann entweder ausgedruckt
 oder auf dem Smartphone gespeichert werden. Besuchen nun Mitbewohner
-der Wohngemeinschaft eines der Geschäfte um von der Vergünstigung zu
-profitieren, können diese sich mit der WGCard ausweisen. Die Geschäfte
+der Wohngemeinschaft eines der Geschäfte, um von einer Vergünstigung zu
+profitieren, können diese sich mit der WGCard ausweisen. Die Unternehmen
 können anschliessend die WGCard scannen und die Promotion mittels WGCard
 einlösen. Im Gegenzug erhalten Sie Zugriff auf die Daten der
 Wohngemeinschaft, die Sie dann weiter verwerten dürfen.
-Die Vermittlungsgebühr wird von der Platform in Rechnung gestellt.
+Die Vermittlungsgebühr wird den Unternehmen von der Platform
+in Rechnung gestellt.
 Jede natürliche oder juristische Person kann eine Promotion aufschalten,
 verpflichtet sich jedoch dadurch, eine bestimmte Vermittlungsgebühr beim
 Promotionen einlösen zu übernehmen.
@@ -52,8 +53,16 @@ sind live online ersichtlich.
 
 # Architektur
 
-Die Architektur besteht aus drei verschiedenen Grundfunktionen, die
-von der Platform bereitgestellt werden.
+Mittels drei verschiedenen Features wurde das Mimium Viable Product
+implementiert. Im Frontend wird XSLT eingesetzt um XHTML Seiten
+zu generieren. Diese verwenden teilweise JavaScript, um die Benutzereingaben
+zu validieren.
+
+Die eingegebenen Daten werden an das PHP Backend versendet, welches
+diese weiterverarbeitet und diese in XML-Dateien ablegt.
+
+Die drei Features sind in den folgenden Kapiteln kurz beschrieben und
+im Architekturdiagramm auf Seite 2 ersichtlich.
 
 ## WGCard bestellen
 
@@ -72,10 +81,10 @@ serverseitig durch ein XML-Schema validiert.
 Wenn eine Promotion erstellt wird, erhält man ein einmalig generiertes,
 randomisiertes Token, welches serverseitig gespeichert wird.
 
-## Promotioneinlösen
+## Promotion einlösen
 
 Durch das Token kann auf die Promotion zugegriffen werden.
-Der Link _/use-promotion.xml ermöglicht die Eingabe des Tokens und dem
+Die Seite `/use-promotion.xml` ermöglicht die Eingabe des Tokens und dem
 Barcode der WG, welche die Promotion nutzt. Beim Aufruf wird automatisch
 eine Nutzung der Promotion abgezogen. Anschliessend werden die
 Daten der WG zurückgegeben, somit erhalten die Geschäfte die Möglichkeit, diese

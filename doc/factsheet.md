@@ -6,7 +6,7 @@ author:
   - Moritz Küttel
 title: "Factsheet XML Projekt: WGCard"
 subtitle: "Eine Plattform für Vergünstigungen für Wohngemeinschaften"
-geometry: "margin=1in"
+geometry: "margin=0.8in"
 fontsize: 10pt
 numbersections: false
 linkcolor: #0000ff;
@@ -46,18 +46,6 @@ Im Markt gibt es bereits ähnliche Systeme wie zum Beispiel die
 StuCard. Jedoch benötigt man dafür ein Bankkonto und man bekommt immer
 Briefe. Unsere Plattform modernisiert das Konzept und das Ganze kann
 online geschehen.
-
-## Inhalt des Fact Sheet (von Vorlesungsfolien / delete me afterwards please)
- * Finale Version der Konzept
- * Präsentation als Fliesstext
- * Kunde, Dienstleistung, Innovation, Marktumfeld, ...
- * URL zu Ihrer Plattform
- * Architektur
- * Diagramm
- * Verwendete Frameworks
- * Technische Stolpersteine
- * Rechtfertigung für jeden (!) Einsatz von nicht XML Technologien
- * Fazit
 
 # Architektur
 
@@ -113,7 +101,7 @@ XML Dateien zu ergänzen, auszulesen und die Barcodes/Promo-Tokens zu validieren
 
 # Fazit
 
-Wir konnten ein Minimum Viable Product implementieren. XSLT besitzt viele Vorteile
+Wir konnten mittels XML Technologien ein Minimum Viable Product implementieren. XSLT besitzt viele Vorteile
 beim Prozessieren von Dokumenten und XSD ermöglicht eine zusätzliche Absicherung
 mithilfe von deskriptiven Mitteln. Beim Erstellen von PDF-Dokumenten erwies sich
 dies als sehr hilfreich, jedoch würden wir in Zukunft keine Webseite nur mit diesen

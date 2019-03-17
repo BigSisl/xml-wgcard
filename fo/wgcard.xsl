@@ -82,7 +82,7 @@
         </fo:block>
 
         <fo:block margin-bottom="12pt">
-            Es freut uns, dass eure WG nun Teil der WGCard Platform ist nun von tollen Vergünstigungen kann. In diesem Brief findet ihr nun eure WGCards. Ihr könnt diese vorweisen bei Geschäften welche eine Promotion auf WGCard aufgeschalten haben, um von den Vergünstigungen zu profitieren!
+            Es freut uns, dass eure WG nun Teil der WGCard Platform ist und nun von tollen Vergünstigungen profitieren kann. In diesem Brief findet ihr nun eure WGCards. Ihr könnt diese vorweisen bei Geschäften welche eine Promotion auf WGCard aufgeschalten haben, um von den Vergünstigungen zu profitieren!
         </fo:block>
 
         <fo:block>

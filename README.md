@@ -18,12 +18,4 @@ or deploy it yourself [bigsisl/xml-wgcard](https://hub.docker.com/r/bigsisl/xml-
 
 You can run this project using the PHP Internal Development Webserver by running the `serve.sh` or `serve.bat` file respectively or as docker container `docker run -p 8000:8000 bigsisl/xml-wgcard`.
 
-Composer is being used for PHP package management. Mostly only required for development dependencies for testing.
-
-# Tests
-
-After you've ran `composer install` you are able to execute the testsuite by running:
-
-`vendor/bin/behat`
-
-
+You can also run a docker container. Built it with `docker/build.sh` and run it with `docker/debug.sh` to have a development server available.

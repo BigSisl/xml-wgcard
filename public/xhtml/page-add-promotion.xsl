@@ -6,7 +6,20 @@
         <pre id="message" class="hide">
         </pre>
         <form action="../php/add-promotion.php" method="POST">
-            <h4>Neue Vergünstigung hinzufügen</h4>
+            <h4>Neue Vergünstigung hinzufügen **</h4>
+
+            <div>
+                <h5>
+                    ** Beim Ausschreiben von Vergünstigung verpflichtet man sich
+                    die vorgeschriebene Vermittlungsgebühr beim Einlösen
+                    einer Vergünstigung zu übernehmen. Diese wird
+                    elektronisch durch eine Email ende Monat nach Einlösung
+                    eingezogen.
+                </h5>
+                <h5>
+                    ** Konzept -> Tritt nicht auf Testplatform in kraft.
+                </h5>
+            </div>
 
             <h5>Kunde - Rechnungsadresse</h5>
             <div class="field">

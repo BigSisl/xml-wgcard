@@ -19,46 +19,53 @@ Als Teil der XML Blockwoche im Frühjahr 2019 an der Hochschule Luzern haben wir
 
 [http://wgcard.zuercher.io](http://wgcard.zuercher.io)
 
+_Der Server wird täglich um 01:00 zurückgesetzt_
+
 Der Quellcode inklusive Versionshistorie ist auf GitHub zu finden:
 
 [https://github.com/bigSisl/XML-WGCard](https://github.com/bigSisl/XML-WGCard)
 
 # Konzept
 
-Die Idee der Plattform ist, dass Firmen mit Vergünstigungen werben
-können, um hauptsächlich junge Leute die in einer Wohngemeinschaft
-wohnen zu erreichen. Wir bieten diesen die Möglichkeit Promotionen zu auf
-unsere Plattform auszuschalten, welche dann für die Wohngemeinschaften
-ersichtlich sind. Zum Beispiel kann ein Hallenbad eine
-Vergünstigung von 10% auf Hallenbadbesuche anbieten.
+Firmen sollen mit dieser Platform durch aufschalte von Promotionen
+gezielt junge Leute in Wohngemeinschaften erreichen können. Die Promotionen
+können nur mit einer validen Karte eingelöst werden. Zum Beispiel kann
+ein Hallenbad eine Vergünstigung von 10% auf Hallenbadbesuche anbieten.
 
 Wohngemeinschaften können sich auf der Plattform anmelden und erhalten
-damit eine WGCard mit einem Barcode, die Sie entweder ausdrucken
-oder auf dem Smartphone speichern können. Besuchen nun Mitbewohner
+damit eine WGCard mit einem Barcode. Diese kann entweder ausgedruckt
+oder auf dem Smartphone gespeichert werden. Besuchen nun Mitbewohner
 der Wohngemeinschaft eines der Geschäfte um von der Vergünstigung zu
 profitieren, können diese sich mit der WGCard ausweisen. Die Geschäfte
 können anschliessend die WGCard scannen und die Promotion mittels WGCard
 einlösen. Im Gegenzug erhalten Sie Zugriff auf die Daten der
-Wohngemeinschaft, die Sie dann weiter verwerten können.
+Wohngemeinschaft, die Sie dann weiter verwerten dürfen.
 Die Vermittlungsgebühr wird dann von der Platform in Rechnung gestellt.
+Jede natürliche oder juristische Person kann eine Promotion aufschalten,
+verpflichtet sich jedoch dadurch, eine bestimmte Vermittlungsgebühr beim
+Promotionen einlösen zu übernehmen.
 
 Im Markt gibt es bereits ähnliche Systeme wie zum Beispiel die
 StuCard. Jedoch benötigt man dafür ein Bankkonto und man bekommt immer
-Briefe. Unsere Plattform modernisiert das Konzept und das Ganze kann
-online geschehen.
+Briefe. Unsere Plattform modernisiert das Konzept und die Promotionen
+sind live online ersichtlich.
 
 # Architektur
 
+Die Archidektur besteht aus drei verschiedenen Grundfunktionen, die
+von der Platform bereitgestellt werden.
+
 ## WGCard bestellen
 
-Wohngemeinschaften können sich im dafür vorgesehenen Benutzerinterface eintragen, um für jedes Mitglied eine WGCard zu erhalten.
-Dafür müssen Sie ihre Daten inklusive Wohnadresse angeben. Anschliessend erhalten Sie ein mit FO generiertes PDF mit einer WG Card für jedes Mitglied.
-
+Wohngemeinschaften können sich im dafür vorgesehenen Benutzerinterface eintragen,
+um für jedes Mitglied eine WGCard zu erhalten. Dafür müssen Sie ihre Daten
+inklusive Wohnadresse angeben. Anschliessend erhalten Sie ein mit FO generiertes
+PDF mit einer WG Card für jedes Mitglied.
 
 ## Promotion aufschalten
 
 Das Aufschalten von Promotionen ist öffentlich und
-kann unter /add-promotion.xml gemacht werden. Die
+kann unter _/add-promotion.xml_ gemacht werden. Die
 Felder werden clientseitig durch ein JSON-Schema und
 serverseitig durch ein XML-Schema validiert.
 

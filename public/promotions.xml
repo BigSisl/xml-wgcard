@@ -14,4 +14,46 @@
     <discount>10%</discount>
     <amount>14</amount>
   </promotion>
+  <promotion id="2" added="2019-03-17">
+    <provider>
+      <name>Kitag Cinemas</name>
+      <address>
+        <street>Seetalplatz 1</street>
+        <zip>6020</zip>
+        <city>Emmen</city>
+      </address>
+    </provider>
+    <name>Kino Maxx</name>
+    <description>Verg&#xFC;nstigung f&#xFC;r Kinoeintritt</description>
+    <discount>30%</discount>
+    <amount>200</amount>
+  </promotion>
+  <promotion id="3" added="2019-03-17">
+    <provider>
+      <name>Crea Beck</name>
+      <address>
+        <street>Suurstoffi 10b</street>
+        <zip>6343</zip>
+        <city>Rotkreuz</city>
+      </address>
+    </provider>
+    <name>Crea Beck Mittagessen</name>
+    <description>Mittagessen zum halben Preis</description>
+    <discount>50%</discount>
+    <amount>50</amount>
+  </promotion>
+  <promotion id="4" added="2019-03-17">
+    <provider>
+      <name>SportXX</name>
+      <address>
+        <street>Ebisquare-Strasse 1</street>
+        <zip>6030</zip>
+        <city>Ebikon</city>
+      </address>
+    </provider>
+    <name>SportXX Ebikon</name>
+    <description>15% auf ihren Einkauf</description>
+    <discount>15%</discount>
+    <amount>100</amount>
+  </promotion>
 </promotions>

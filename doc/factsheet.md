@@ -114,10 +114,10 @@ XML Dateien zu ergänzen, auszulesen und die Barcodes/Promo-Tokens zu validieren
 # Fazit
 
 Wir konnten ein Minimum Viable Product implementieren. XSLT besitzt viele Vorteile
-beim prozessieren von Dokumenten und XSD ermöglichen eine zusätzliche Absicherung
+beim Prozessieren von Dokumenten und XSD ermöglicht eine zusätzliche Absicherung
 mithilfe von deskriptiven Mitteln. Beim Erstellen von PDF-Dokumenten erwies sich
 dies als sehr hilfreich, jedoch würden wir in Zukunft keine Webseite nur mit diesen
-Technologien erstellen. Das strikte Einhalten der Standards ist teils ungünstigt
-und verlangsamt die Arbeit. Beispiels verwenden viele Frameworks Templateengines
+Technologien erstellen. Das strikte Einhalten der Standards ist teils ungünstig
+und verlangsamt die Arbeit. Beispielsweise verwenden viele Frameworks Templateengines
 die XSD sauber ersetzen können und zudem einfacher sind. Ebenso wird teils die
-Validierung im Code der deskriptiven Validierung beforzug.
+Validierung im Code der deskriptiven Validierung bevorzugt.

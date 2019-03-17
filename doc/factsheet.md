@@ -27,7 +27,7 @@ Der Quellcode inklusive Versionshistorie ist auf GitHub zu finden:
 
 # Konzept
 
-Firmen sollen mit dieser Platform durch aufschalte von Promotionen
+Firmen sollen mit dieser Platform durch aufschalten von Promotionen
 gezielt junge Leute in Wohngemeinschaften erreichen können. Die Promotionen
 können nur mit einer validen Karte eingelöst werden. Zum Beispiel kann
 ein Hallenbad eine Vergünstigung von 10% auf Hallenbadbesuche anbieten.
@@ -52,7 +52,7 @@ sind live online ersichtlich.
 
 # Architektur
 
-Die Archidektur besteht aus drei verschiedenen Grundfunktionen, die
+Die Architektur besteht aus drei verschiedenen Grundfunktionen, die
 von der Platform bereitgestellt werden.
 
 ## WGCard bestellen

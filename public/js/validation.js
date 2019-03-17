@@ -18,12 +18,12 @@ class Validation {
 
     static setSuccess(text) {
         $("#message").attr("class","success");
-        $("#message").text(text);
+        $("#message").html(text);
     }
 
     static setError(text) {
         $("#message").attr("class","error");
-        $("#message").text(text);
+        $("#message").html(text);
     }
 
     static openInBlank(url) {

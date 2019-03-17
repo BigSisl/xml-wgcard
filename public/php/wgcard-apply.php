@@ -29,11 +29,12 @@
 WGCard erfolgreich erstellt.
 
 Die WGCard sollte sich automatisch öffnen.
-Folgend ist der Link zur WGCard:
+Ansonsten klicken Sie den folgenden Link, um die WGCard zu erhalten:
+
 
 EOT;
             $object->open_blank = $pdfUrl;
-            $object->message .= $pdfUrl;
+            $object->message .= '<a href=" ' . htmlentities($pdfUrl) . '">' . htmlentities($pdfUrl) . '</a>';
             $object->type = 'success';
         } else {
             $object->message = "Fehler beim generiern der WG Karte";

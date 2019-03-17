@@ -91,7 +91,7 @@ Es wurden keine Sicherheitsmassnahmen gegen Bruteforceattecken implementiert.
 ## Verwendete Frameworks
 
 Wir setzen zwei XSLT Skripts von RenderX ein, um die SVGs für die Barcodes
-zu generieren. Diese sind im `public/svg` Verzeichis zu finden.
+zu generieren. Diese sind im `svg` Verzeichis zu finden.
 
 Clientseitig haben wir neben dem klassischen JQuery als Unterstützung
 auch ajv.js verwendet. Diese Bibliothek hilft beim Validieren von JSON

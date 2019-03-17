@@ -114,7 +114,7 @@ EOT;
         //pass PATH environment variable else fop cannot be found
         $env = ['PATH' => getenv("PATH")];
         // use the public directory as CWD so the logo in the header can be found
-        $cwd =  __DIR__ . '/..';
+        $cwd =  __DIR__ . '/../../';
         $proc = proc_open("fop -xml - -xsl fo/wgcard.xsl -pdf -", [
             0 => ['pipe', 'r'],
             // set stdout directly to pdffile, fop will write there

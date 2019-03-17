@@ -25,7 +25,7 @@
                             <fo:table-row>
                                 <fo:table-cell>
                                     <fo:block text-align="left">
-                                        <fo:external-graphic src="url('img/logo.png')" />
+                                        <fo:external-graphic src="url('public/img/logo.png')" />
                                     </fo:block>
                                 </fo:table-cell>
                                 <fo:table-cell>
@@ -82,7 +82,7 @@
         </fo:block>
 
         <fo:block margin-bottom="12pt">
-            Es freut uns das eure WG nun Teil der WGCard Platform ist nun von tollen Vergünsitungen in deiner Region profitieren kann. In diesem Brief findet ihr nun eure WGCards. Ihr könnt diese einfach vorweisen bei Geschäften welche eine Promotion auf WGCard aufgeschalten haben, um von den Vergünstigungen zu profitieren!
+            Es freut uns, dass eure WG nun Teil der WGCard Platform ist nun von tollen Vergünstigungen kann. In diesem Brief findet ihr nun eure WGCards. Ihr könnt diese vorweisen bei Geschäften welche eine Promotion auf WGCard aufgeschalten haben, um von den Vergünstigungen zu profitieren!
         </fo:block>
 
         <fo:block>
@@ -105,7 +105,7 @@
                 <fo:table-row keep-together.within-page="always" background-color="#f2f5fa">
                     <fo:table-cell border="solid #373e48 1pt" padding="12pt" text-align="center">
                         <fo:block>
-                            <fo:external-graphic src="url('img/logo.png')" />
+                            <fo:external-graphic src="url('public/img/logo.png')" />
                         </fo:block>
 
                         <fo:block>
@@ -135,7 +135,7 @@
                             <xsl:variable name="wgid" select="../../@id" />
                             <fo:instream-foreign-object content-width="100%" content-height="100%">
                                 <xsl:call-template name="barcode-code128">
-                                    <xsl:with-param name="value" select="document('../../database/barcodes.xml')//b:barcode[@wg-id = $wgid]"/>
+                                    <xsl:with-param name="value" select="document('../database/barcodes.xml')//b:barcode[@wg-id = $wgid]"/>
                                     <xsl:with-param name="subset" select="'B'"/>
                                 </xsl:call-template>
                             </fo:instream-foreign-object>

@@ -2,7 +2,7 @@
 documentclass: extarticle
 author:
   - Lucien Zürcher
-  - Fabian Brunn
+  - Fabian Brand
   - Moritz Küttel
 title: "Factsheet XML Projekt: WGCard"
 subtitle: "Eine Plattform für Vergünstigungen für Wohngemeinschaften"
@@ -26,21 +26,21 @@ Der Quellcode inklusive Versionshistorie ist auf GitHub zu finden:
 # Konzept
 
 Die Idee der Plattform ist, dass Firmen mit Vergünstigungen werben
-können, um hauptsächlich Junge Leute in in einer Wohngemeinschaft
+können, um hauptsächlich junge Leute die in einer Wohngemeinschaft
 wohnen zu erreichen. Wir bieten diesen die Möglichkeit Promotionen zu auf
 unsere Plattform auszuschalten, welche dann für die Wohngemeinschaften
 ersichtlich sind. Zum Beispiel kann ein Hallenbad eine
-Vergünstigung von 10% für Hallenbad besuche als Promotion eingeben.
+Vergünstigung von 10% auf Hallenbadbesuche anbieten.
 
 Wohngemeinschaften können sich auf der Plattform anmelden und erhalten
-dann eine WGCard mit einem Barcode, die Sie entweder ausdrucken können,
+damit eine WGCard mit einem Barcode, die Sie entweder ausdrucken
 oder auf dem Smartphone speichern können. Besuchen nun Mitbewohner
-der Wohngemeinschaft eines der Geschäfte, um von der Vergünstigung zu
-profiteren, können diese sich mit der WGCard ausweisen. Die Geschäfter
+der Wohngemeinschaft eines der Geschäfte um von der Vergünstigung zu
+profitieren, können diese sich mit der WGCard ausweisen. Die Geschäfte
 können anschliessend die WGCard scannen und die Promotion mittels WGCard
-einlösen, was diesen Zugriff auf die Daten der Wohngemeinschaft gibt,
-welche sie dann weiter verwerten können. Die Vermittlungsgebühr stellen
-wir dann den Firmen in Rechnung.
+einlösen. Im Gegenzug erhalten Sie Zugriff auf die Daten der 
+Wohngemeinschaft, die Sie dann weiter verwerten können. 
+Die Vermittlungsgebühr wird dann von der Platform in Rechnung gestellt.
 
 Im Markt gibt es bereits ähnliche Systeme wie zum Beispiel die
 StuCard. Jedoch benötigt man dafür ein Bankkonto und man bekommt immer

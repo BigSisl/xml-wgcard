@@ -63,54 +63,54 @@ online geschehen.
 
 ## WGCard bestellen
 
-Wohngemeinschaften können sich hier eintragen um für jedes Mitglied eine WGCard zu erhalten.
-Dafür müssen Sie ihre Daten inklusive Wohnadresse angeben. Anschliessend erhalten diese ein mit FO generiertes PDF mit einer WG Card für jedes Mitglied.
+Wohngemeinschaften können sich im dafür vorgesehenen Benutzerinterface eintragen, um für jedes Mitglied eine WGCard zu erhalten.
+Dafür müssen Sie ihre Daten inklusive Wohnadresse angeben. Anschliessend erhalten Sie ein mit FO generiertes PDF mit einer WG Card für jedes Mitglied.
 
 
 ## Promotion aufschalten
 
 Das Aufschalten von Promotionen ist öffentlich und
 kann unter /add-promotion.xml gemacht werden. Die
-Felder werden Clientseitig durch ein JSON-Schema und
-Serverseitig durch ein XML-Schema validiert.
+Felder werden clientseitig durch ein JSON-Schema und
+serverseitig durch ein XML-Schema validiert.
 
-Wenn eine Promotion erstellt wird, erhält man einmalig
-randomisiertes Token welches Serverseitig gespeichert wird.
+Wenn eine Promotion erstellt wird, erhält man ein einmalig generiertes,
+randomisiertes Token, welches serverseitig gespeichert wird.
 Dieses Token ermöglicht dem Ersteller das abziehen von genutzten Vergünstigungen.
 
 ## Promotioneinlösen
 
 TODO:
 Durch das Token kann auf die Promotion zugegriffen werden.
-Der Link _/promotion_access.xml_ ermöglicht die Eingabe des Tokens
-mit einem Barcode welche wg diese Promotion nutzt. Anschliessend werden die
-Daten der WG zurückgegeben, somit erhalten die Geschäfter die Möglichkeit diese
+Der Link _/promotion_access.xml ermöglicht die Eingabe des Tokens und dem
+Barcode der WG, welche die Promotion nutzt. Anschliessend werden die
+Daten der WG zurückgegeben, somit erhalten die Geschäfte die Möglichkeit, diese
 weiter zu verwerten.
 
 Es wurden keine Sicherheitsmassnahmen gegen Bruteforceattecken implementiert.
 
 ## Verwendete Frameworks
 
-Wir setzen zwei XSLT Skripts von RenderX ein um die SVGs für die Barcodes
+Wir setzen zwei XSLT Skripts von RenderX ein, um die SVGs für die Barcodes
 zu generieren. Diese sind im `public/svg` Verzeichis zu finden.
 
 Clientseitig haben wir neben dem klassischen JQuery als Unterstützung
-auch ajv.js verwendet. Diese Bibliothek hilft beim validieren von JSON
+auch ajv.js verwendet. Diese Bibliothek hilft beim Validieren von JSON
 Objekten mit JSON-Schemas.
 
 
 ## Technische Stolpersteine
 
-Da die .xml dokumente Komplett ausgeliefert werden müssen bei verwendung von
-client side XSLT, können darin keine Geheimnisse wie die Tokens übermittelt
-werden. Deshalb muss PHP eingesetzt werden um diese Daten zu trennen und wieder
+Da die .xml Dokumente komplett ausgeliefert werden müssen bei Verwendung von
+clientseitigem XSLT, können darin keine Geheimnisse wie die Tokens übermittelt
+werden. Deshalb muss PHP eingesetzt werden, um diese Daten zu trennen und wieder
 zusammenzuführen.
 
 ## Einsatz von nicht XML/JSON-Technologien
 
-Wir verwenden PHP auf der serverseite um IDs, Tokens und Barcode Werte (nicht
-die eigentlichen Barcodes) zu generieren. Ausserdem wird PHP auch verwendet um
-XML Dateien zu ergänzen auszulesen und die Barcodes/Promo-Tokens zu validieren
+Wir verwenden PHP auf der Serverseite, um IDs, Tokens und Barcode Werte (nicht
+die eigentlichen Barcodes) zu generieren. Zusätzlich wird auch PHP verwendet, um
+XML Dateien zu ergänzen, auszulesen und die Barcodes/Promo-Tokens zu validieren.
 
 # Fazit
 

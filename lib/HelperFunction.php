@@ -92,7 +92,7 @@ function getWGByBarcode($barcode) {
  * Return wg id or -1 on error
  */
 function getWG($id) {
-    $xml = simplexml_load_file(__DIR__ . '/../public/wgs.xml');
+    $xml = simplexml_load_file(__DIR__ . '/../database/wgs.xml');
 
     $xml->registerXPathNamespace('w', 'http://wgcard.xml.hslu.ch/wgs');
 

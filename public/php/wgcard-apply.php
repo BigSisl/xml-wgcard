@@ -1,7 +1,7 @@
 <?php
     include __DIR__ . '/../../lib/xmlutils.php';
     //error_reporting(0);
-    $xml = simplexml_load_file('../wgs.xml');
+    $xml = simplexml_load_file(__DIR__ . '/../../database/wgs.xml');
     $barcodes_xml = simplexml_load_file('../../database/barcodes.xml');
     $host = apache_request_headers()['Host'];
 
@@ -14,13 +14,13 @@
     $wg = insertIntoXML($xml);
     $barcode = insertIntoBarcodesXML($barcodes_xml, $wg->attributes()->id);
 
-    $xml_new_valid = validateXML($xml, '../schemas/wgs.xsd');
-    $barcodes_xml_new_valid = @validateXML($barcodes_xml, '../schemas/barcodes.xsd');
+    $xml_new_valid = validateXML($xml, __DIR__ . '/../schemas/wgs.xsd');
+    $barcodes_xml_new_valid = @validateXML($barcodes_xml, __DIR__ . '/../schemas/barcodes.xsd');
 
     #store xml into original xml if validation is ok
     if($xml_new_valid && $barcodes_xml_new_valid){
-        persistXML('../wgs.xml', $xml);
-        persistXML('../../database/barcodes.xml', $barcodes_xml);
+        persistXML(__DIR__ . '/../../database/wgs.xml', $xml);
+        persistXML(__DIR__ . '/../../database/barcodes.xml', $barcodes_xml);
 
         if(generateWGBarcodePDF($wg, (string)$barcode)) {
             $pdfUrl = 'http://' . $host . '/pdfs/' . (string)$barcode . '.pdf';

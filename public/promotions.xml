@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <promotions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/promotions" xsi:schemaLocation="http://wgcard.xml.hslu.ch/promotions schemas/promotions.xsd">
-  <promotion id="1" added="2019-10-10">
+  <promotion id="1" added="2019-03-17">
     <provider>
-        <name>test</name>
-        <address>
-            <street>Test</street>
-            <zip>test</zip>
-            <city>test</city>
-        </address>
+      <name>Beispiel GMBH</name>
+      <address>
+        <street>Fachstrasse</street>
+        <zip>6762</zip>
+        <city>Irgendwo</city>
+      </address>
     </provider>
-    <name>Neue Verg&#xFC;nstigung</name>
-    <description>description</description>
+    <name>Neubad Luzern</name>
+    <description>Verg&#xFC;nstigung f&#xFC;r Hallenbadbesuch</description>
     <discount>10%</discount>
-    <amount>-1</amount>
+    <amount>14</amount>
   </promotion>
 </promotions>

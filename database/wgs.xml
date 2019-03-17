@@ -7,110 +7,35 @@
         <person>
           <firstName>Fabian</firstName>
           <lastName>Brand</lastName>
-          <email>fabuh26@hotmail.com</email>
-          <tel>076 702 69 32</tel>
+          <email>fabian.brand@example.ch</email>
+          <tel>079 123 45 67</tel>
         </person>
         <contactPerson>true</contactPerson>
       </wg-member>
       <wg-member>
         <person>
-          <firstName>Fabian</firstName>
-          <lastName>Brand</lastName>
-          <email>fabuh26@hotmail.com</email>
-          <tel>076 702 69 32</tel>
+          <firstName>Lucien</firstName>
+          <lastName>Zuercher</lastName>
+          <email>lucien.zuercher@example.ch</email>
+          <tel>079 765 43 21</tel>
         </person>
         <contactPerson>false</contactPerson>
       </wg-member>
-    </wg-members>
-    <alias>SuperWg</alias>
-    <address>
-      <street>Kannenbuehlstrasse 20</street>
-      <zip>6280</zip>
-      <city>Hochdorf</city>
-    </address>
-  </wg>
-  <wg id="2">
-    <wg-members>
-      <wg-member>
-        <person>
-          <firstName>s</firstName>
-          <lastName>Brand</lastName>
-          <email>fabuh26@hotmail.com</email>
-          <tel>076 702 69 32</tel>
-        </person>
-        <contactPerson>true</contactPerson>
-      </wg-member>
-      <wg-member>
-        <person>
-          <firstName>s</firstName>
-          <lastName>Brand</lastName>
-          <email>fabuh26@hotmail.com</email>
-          <tel>076 702 69 32</tel>
-        </person>
-        <contactPerson>false</contactPerson>
-      </wg-member>
-    </wg-members>
-    <alias>smallWg</alias>
-    <address>
-      <street>Kannenbuehlstrasse 20</street>
-      <zip>6280</zip>
-      <city>Hochdorf</city>
-    </address>
-  </wg>
-  <wg id="3">
-    <wg-members>
-      <wg-member>
-        <person>
-          <firstName>Fabian</firstName>
-          <lastName>Brand</lastName>
-          <email>asdfasdf</email>
-          <tel>asdfadfasdf</tel>
-        </person>
-        <contactPerson>true</contactPerson>
-      </wg-member>
-      <wg-member>
-        <person>
-          <firstName>Max</firstName>
-          <lastName>Bader</lastName>
-          <email>asdf</email>
-          <tel>adfasd</tel>
-        </person>
-        <contactPerson>false</contactPerson>
-      </wg-member>
-    </wg-members>
-    <alias>Super wg</alias>
-    <address>
-      <street>asdfasd</street>
-      <zip>asdfas</zip>
-      <city>dasdfas</city>
-    </address>
-  </wg>
-  <wg id="4">
-    <wg-members>
       <wg-member>
         <person>
           <firstName>Moritz</firstName>
           <lastName>K&#xFC;ttel</lastName>
-          <email>moritz.kuettel@gmail.com</email>
-          <tel>000 000 00 00</tel>
-        </person>
-        <contactPerson>true</contactPerson>
-      </wg-member>
-      <wg-member>
-        <person>
-          <firstName/>
-          <lastName/>
-          <email/>
-          <tel/>
+          <email>m.kuettel@example.ch</email>
+          <tel>079 765 21 34</tel>
         </person>
         <contactPerson>false</contactPerson>
       </wg-member>
     </wg-members>
-    <alias>H&#xE4;xeh&#xFC;sli</alias>
+    <alias>WGCard Group</alias>
     <address>
-      <street>Wehntalerstrasse 56</street>
-      <zip>8057</zip>
-      <city>Z&#xFC;rich</city>
+      <street>Beispielsstrasse 20</street>
+      <zip>4500</zip>
+      <city>Beispiel</city>
     </address>
   </wg>
 </wgs>

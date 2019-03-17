@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
-<promoTokens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://wgcard.xml.hslu.ch/promoTokens"
-    xsi:schemaLocation="http://wgcard.xml.hslu.ch/promotions public/schemas/promoTokens.xsd">
-  <token promotion-id="1">0b3cea4fa1bcc1da3318e87f45dcc31e</token>
+<promoTokens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wgcard.xml.hslu.ch/promoTokens" xsi:schemaLocation="http://wgcard.xml.hslu.ch/promotions public/schemas/promoTokens.xsd">
+  <token promotion-id="1">630a57327adda7c4329631bc2c58d0a6</token>
 </promoTokens>
